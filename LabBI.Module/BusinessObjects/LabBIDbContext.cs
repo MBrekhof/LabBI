@@ -8,6 +8,7 @@ using DevExpress.ExpressApp.EFCore.DesignTime;
 using DevExpress.Persistent.BaseImpl.EFCore.AuditTrail;
 using DevExpress.Persistent.BaseImpl.EF.Kpi;
 
+
 namespace LabBI.Module.BusinessObjects;
 
 // This code allows our Model Editor to get relevant EF Core metadata at design time.
@@ -52,6 +53,7 @@ public class LabBIEFCoreDbContext : DbContext {
     public DbSet<AuditDataItemPersistent> AuditData { get; set; }
     public DbSet<AuditEFCoreWeakReference> AuditEFCoreWeakReference { get; set; }
     public DbSet<Event> Event { get; set; }
+    public DbSet<Invoice> Invoice { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder) {
         base.OnModelCreating(modelBuilder);
@@ -75,6 +77,76 @@ public class LabBIEFCoreDbContext : DbContext {
             .HasMany(t => t.Aspects)
             .WithOne(t => t.Owner)
             .OnDelete(DeleteBehavior.Cascade);
+
+        modelBuilder.Entity<Invoice>(entity =>
+        {
+            entity.HasKey(e => e.InvoiceNumber)
+                  .HasName("PK_INVOICE_INVOICE_NUMBER");
+
+            entity.Property(e => e.InvoiceNumber).HasColumnName("INVOICE_NUMBER");
+
+            entity.Property(e => e.ContractNumber).HasColumnName("CONTRACT_NUMBER");
+
+            entity.Property(e => e.Customer).HasColumnName("CUSTOMER");
+
+            entity.Property(e => e.InvoiceId).HasColumnName("INVOICE_ID");
+
+            entity.Property(e => e.PoNumber).HasColumnName("PO_NUMBER");
+
+            entity.Property(e => e.ChangedBy).HasColumnName("CHANGED_BY");
+
+            entity.Property(e => e.ChangedOn).HasColumnName("CHANGED_ON");
+
+            entity.Property(e => e.GroupName).HasColumnName("GROUP_NAME");
+
+            entity.Property(e => e.Closed).HasColumnName("CLOSED");
+
+            entity.Property(e => e.InvoiceStarted).HasColumnName("INVOICE_STARTED");
+
+            entity.Property(e => e.InvoiceSchedDate).HasColumnName("INVOICE_SCHED_DATE");
+
+            entity.Property(e => e.InvoicedOn).HasColumnName("INVOICED_ON");
+
+            entity.Property(e => e.InvoicedBy).HasColumnName("INVOICED_BY");
+
+            entity.Property(e => e.ExchangeFactor).HasColumnName("EXCHANGE_FACTOR");
+
+            entity.Property(e => e.ItemTotal).HasColumnName("ITEM_TOTAL");
+
+            entity.Property(e => e.AdjustmentTotal).HasColumnName("ADJUSTMENT_TOTAL");
+
+            entity.Property(e => e.AmountDue).HasColumnName("AMOUNT_DUE");
+
+            entity.Property(e => e.PaymentDue).HasColumnName("PAYMENT_DUE");
+
+            entity.Property(e => e.InvoiceComments).HasColumnName("INVOICE_COMMENTS");
+
+            entity.Property(e => e.InternalComments).HasColumnName("INTERNAL_COMMENTS");
+
+            entity.Property(e => e.PrintCount).HasColumnName("PRINT_COUNT");
+
+            entity.Property(e => e.PrintedBy).HasColumnName("PRINTED_BY");
+
+            entity.Property(e => e.PrintedOn).HasColumnName("PRINTED_ON");
+
+            entity.Property(e => e.LastPrintFile).HasColumnName("LAST_PRINT_FILE");
+
+            entity.Property(e => e.TCumulativeId).HasColumnName("T_CUMULATIVE_ID");
+
+            entity.Property(e => e.TCustomerGroup).HasColumnName("T_CUSTOMER_GROUP");
+
+            entity.Property(e => e.TCustomerPO).HasColumnName("T_CUSTOMER_PO");
+
+            entity.Property(e => e.TFinSysExportOn).HasColumnName("T_FIN_SYS_EXPORT_ON");
+
+            entity.Property(e => e.TInvoiceMonth).HasColumnName("T_INVOICE_MONTH");
+
+            entity.Property(e => e.TInvoiceYear).HasColumnName("T_INVOICE_YEAR");
+
+            entity.Property(e => e.TPdfFile).HasColumnName("T_PDF_FILE");
+
+            entity.Property(e => e.TReviewReq).HasColumnName("T_REVIEW_REQ");
+        });
     }
 }
 
