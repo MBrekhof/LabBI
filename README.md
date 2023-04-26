@@ -11,3 +11,6 @@ Note: this program is based on the following:
 - DevExpress components
 
 
+Note: Allow invalid certificates for resources loaded from localhost.
+needs to be set to true when developping from VS 2022 and using chrome, access with chrome://flags in address bar to set to enabled
+
