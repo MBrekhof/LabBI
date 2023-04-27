@@ -2,6 +2,11 @@
 <Application Title="LabBI">
   <BOModel>
     <Class Name="DevExpress.Persistent.BaseImpl.EF.PermissionPolicy.PermissionPolicyUser" Caption="Base User" />
+    <Class Name="LabBI.Module.BusinessObjects.Invoice">
+      <OwnMembers>
+        <Member Name="Closed" PredefinedValues="T;F" />
+      </OwnMembers>
+    </Class>
   </BOModel>
   <Options>
     <LayoutManagerOptions RequiredFieldMark="*" />
@@ -12,6 +17,86 @@
   </SchemaModules>
   <Views>
     <ListView Id="ApplicationUser_ListView" Caption="Users" />
+    <DetailView Id="Invoice_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <LayoutGroup Id="Invoice" RelativeSize="100">
+              <LayoutGroup Id="Invoice_col1" RelativeSize="49.9302649930265">
+                <LayoutItem Id="InvoiceNumber" RelativeSize="6.694560669456067" />
+                <LayoutItem Id="ContractNumber" RelativeSize="5.02092050209205" />
+                <LayoutItem Id="Customer" RelativeSize="5.02092050209205" />
+                <LayoutItem Id="InvoiceId" RelativeSize="5.02092050209205" />
+                <LayoutItem Id="PoNumber" RelativeSize="5.02092050209205" />
+                <LayoutGroup Id="Auto56e66e59-e848-42d2-b108-802a83b51bb9" ShowCaption="False" Caption="" Direction="Horizontal" Index="5" RelativeSize="5.02092050209205" IsNewNode="True">
+                  <LayoutItem Id="ChangedBy" ViewItem="ChangedBy" Index="0" RelativeSize="50" IsNewNode="True" />
+                  <LayoutItem Id="ChangedOn" ViewItem="ChangedOn" Index="1" RelativeSize="50" IsNewNode="True" />
+                </LayoutGroup>
+                <LayoutGroup Id="Autob05adac2-82ce-442c-acbe-cb7a98630e42" ShowCaption="False" Caption="" Index="6" RelativeSize="25.10460251046025" IsNewNode="True">
+                  <LayoutItem Id="GroupName" ViewItem="GroupName" Index="0" RelativeSize="20" IsNewNode="True" />
+                  <LayoutItem Id="Closed" ViewItem="Closed" Index="1" RelativeSize="20" IsNewNode="True" />
+                  <LayoutItem Id="InvoiceStarted" ViewItem="InvoiceStarted" Index="2" RelativeSize="20" IsNewNode="True" />
+                  <LayoutItem Id="InvoiceSchedDate" ViewItem="InvoiceSchedDate" Index="3" RelativeSize="20" IsNewNode="True" />
+                  <LayoutGroup Id="Autob5e00511-d9ed-4f5d-b945-0d4e58f5951e" ShowCaption="False" Caption="" Direction="Horizontal" Index="4" RelativeSize="20" IsNewNode="True">
+                    <LayoutItem Id="InvoicedOn" ViewItem="InvoicedOn" Index="0" RelativeSize="50" IsNewNode="True" />
+                    <LayoutItem Id="InvoicedBy" ViewItem="InvoicedBy" Index="1" RelativeSize="50" IsNewNode="True" />
+                  </LayoutGroup>
+                </LayoutGroup>
+                <LayoutItem Id="GroupName" Index="6" RelativeSize="5.02092050209205" Removed="True" />
+                <LayoutItem Id="Closed" Index="7" RelativeSize="5.02092050209205" Removed="True" />
+                <LayoutItem Id="ExchangeFactor" Index="7" RelativeSize="5.02092050209205" />
+                <LayoutItem Id="InvoiceStarted" Index="8" RelativeSize="5.02092050209205" Removed="True" />
+                <LayoutItem Id="ItemTotal" Index="8" RelativeSize="5.02092050209205" />
+                <LayoutItem Id="AdjustmentTotal" Index="9" RelativeSize="33.05439330543933" />
+                <LayoutItem Id="InvoiceSchedDate" Index="9" RelativeSize="5.02092050209205" Removed="True" />
+                <LayoutItem Id="InvoicedOn" Index="10" RelativeSize="5.02092050209205" Removed="True" />
+                <LayoutItem Id="InvoicedBy" Index="11" RelativeSize="5.02092050209205" Removed="True" />
+                <LayoutItem Id="ChangedBy" Removed="True" />
+                <LayoutItem Id="ChangedOn" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Invoice_col2" RelativeSize="50.0697350069735">
+                <LayoutItem Id="AmountDue" RelativeSize="6.694560669456067" />
+                <LayoutItem Id="PaymentDue" RelativeSize="5.02092050209205" />
+                <LayoutItem Id="InvoiceComments" RelativeSize="5.02092050209205" />
+                <LayoutItem Id="InternalComments" RelativeSize="5.02092050209205" />
+                <LayoutItem Id="PrintCount" RelativeSize="5.02092050209205" />
+                <LayoutGroup Id="Auto25a60da7-0f68-4636-a575-85c415656c36" ShowCaption="False" Caption="" Direction="Horizontal" Index="5" RelativeSize="5.02092050209205" IsNewNode="True">
+                  <LayoutItem Id="PrintedBy" ViewItem="PrintedBy" Index="0" RelativeSize="49.860724233983284" IsNewNode="True" />
+                  <LayoutItem Id="PrintedOn" ViewItem="PrintedOn" Index="1" RelativeSize="50.139275766016716" IsNewNode="True" />
+                </LayoutGroup>
+                <LayoutGroup Id="Auto4b0eefaa-c215-4ee9-9b51-c5276175e9d6" ShowCaption="False" Caption="" Index="6" RelativeSize="30.1255230125523" IsNewNode="True">
+                  <LayoutItem Id="LastPrintFile" ViewItem="LastPrintFile" Index="0" RelativeSize="16.666666666666668" IsNewNode="True" />
+                  <LayoutItem Id="TCumulativeId" ViewItem="TCumulativeId" Index="1" RelativeSize="16.666666666666668" IsNewNode="True" />
+                  <LayoutItem Id="TCustomerGroup" ViewItem="TCustomerGroup" Index="2" RelativeSize="16.666666666666668" IsNewNode="True" />
+                  <LayoutItem Id="TCustomerPo" ViewItem="TCustomerPo" Index="3" RelativeSize="16.666666666666668" IsNewNode="True" />
+                  <LayoutItem Id="TFinSysExportOn" ViewItem="TFinSysExportOn" Index="4" RelativeSize="16.666666666666668" IsNewNode="True" />
+                  <LayoutGroup Id="Auto56bc8f57-d565-4c8e-a154-7573d4090b6a" ShowCaption="False" Caption="" Direction="Horizontal" Index="5" RelativeSize="16.666666666666668" IsNewNode="True">
+                    <LayoutItem Id="TInvoiceMonth" ViewItem="TInvoiceMonth" Index="0" RelativeSize="49.860724233983284" IsNewNode="True" />
+                    <LayoutItem Id="TInvoiceYear" ViewItem="TInvoiceYear" Index="1" RelativeSize="50.139275766016716" IsNewNode="True" />
+                  </LayoutGroup>
+                </LayoutGroup>
+                <LayoutItem Id="LastPrintFile" RelativeSize="5.02092050209205" Index="6" Removed="True" />
+                <LayoutItem Id="TCumulativeId" RelativeSize="5.02092050209205" Index="7" Removed="True" />
+                <LayoutItem Id="TPdfFile" RelativeSize="5.02092050209205" Index="7" />
+                <LayoutItem Id="TCustomerGroup" RelativeSize="5.02092050209205" Index="8" Removed="True" />
+                <LayoutItem Id="TReviewReq" RelativeSize="33.05439330543933" Index="8" />
+                <LayoutItem Id="TCustomerPo" RelativeSize="5.02092050209205" Index="9" Removed="True" />
+                <LayoutItem Id="TFinSysExportOn" RelativeSize="5.02092050209205" Index="10" Removed="True" />
+                <LayoutItem Id="TInvoiceMonth" RelativeSize="5.02092050209205" Index="11" Removed="True" />
+                <LayoutItem Id="TInvoiceYear" RelativeSize="5.02092050209205" Index="12" Removed="True" />
+                <LayoutItem Id="PrintedBy" RelativeSize="5.02092050209205" Removed="True" />
+                <LayoutItem Id="PrintedOn" RelativeSize="5.02092050209205" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Invoice_ListView" DataAccessMode="Server" TopReturnedObjects="250">
+      <Sorting>
+        <SortProperty Id="Invoicenr" Direction="Descending" PropertyName="InvoiceNumber" IsNewNode="True" />
+      </Sorting>
+    </ListView>
     <ListView Id="KpiDefinition_ListView">
       <Columns>
         <ColumnInfo Id="Criteria" Width="48" />
