@@ -2,12 +2,16 @@
 <Application Title="LabBI">
   <BOModel>
     <Class Name="DevExpress.Persistent.BaseImpl.EF.PermissionPolicy.PermissionPolicyUser" Caption="Base User" />
-    <Class Name="LabBI.Module.BusinessObjects.Invoice">
-      <OwnMembers>
-        <Member Name="Closed" PredefinedValues="T;F" />
-      </OwnMembers>
-    </Class>
   </BOModel>
+  <NavigationItems>
+    <Items>
+      <Item Id="Default">
+        <Items>
+          <Item Id="UserSettings" ViewId="ModelDifference_ListView" Caption="User Settings" IsNewNode="True" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
   <Options>
     <LayoutManagerOptions RequiredFieldMark="*" />
   </Options>
@@ -92,10 +96,12 @@
         </LayoutGroup>
       </Layout>
     </DetailView>
-    <ListView Id="Invoice_ListView" DataAccessMode="Server" TopReturnedObjects="250">
-      <Sorting>
-        <SortProperty Id="Invoicenr" Direction="Descending" PropertyName="InvoiceNumber" IsNewNode="True" />
-      </Sorting>
+    <ListView Id="Invoice_LookupListView">
+      <Columns>
+        <ColumnInfo Id="ContractNumber" Width="113" />
+        <ColumnInfo Id="Customer" Width="99" />
+        <ColumnInfo Id="InvoiceId" Width="99" />
+      </Columns>
     </ListView>
     <ListView Id="KpiDefinition_ListView">
       <Columns>

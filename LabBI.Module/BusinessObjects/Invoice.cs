@@ -17,17 +17,21 @@ namespace LabBI.Module.BusinessObjects
         [Key]
         [Column("INVOICE_NUMBER")]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [VisibleInListView(true), VisibleInLookupListView(true)]
         public virtual int InvoiceNumber { get; set; }
 
         [Column("CONTRACT_NUMBER")]
+        [VisibleInListView(true), VisibleInLookupListView(true)]
         public virtual int? ContractNumber { get; set; }
 
         [Column("CUSTOMER")]
         [MaxLength(20)]
+        [VisibleInListView(true), VisibleInLookupListView(true)]
         public virtual string Customer { get; set; }
 
         [Column("INVOICE_ID")]
         [MaxLength(20)]
+        [VisibleInListView(true), VisibleInLookupListView(true)]
         public virtual string InvoiceId { get; set; }
 
         [Column("PO_NUMBER")]
@@ -154,7 +158,9 @@ namespace LabBI.Module.BusinessObjects
 
         [Column("T_REVIEW_REQ")]
         [MaxLength(1)]
-        [VisibleInListView(false), VisibleInLookupListView(false)]
+     
+        [VisibleInListView(false)]
+        [VisibleInLookupListView(false)]
         public virtual string TReviewReq { get; set; }
 
 
