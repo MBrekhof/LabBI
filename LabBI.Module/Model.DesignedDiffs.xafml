@@ -5,11 +5,16 @@
   </BOModel>
   <NavigationItems>
     <Items>
-      <Item Id="Default">
+      <Item Id="CRM" Index="10" />
+      <Item Id="Invoices" Index="20" />
+      <Item Id="Samples" Index="30" />
+      <Item Id="Reports" Index="80" />
+      <Item Id="Default" Index="90">
         <Items>
           <Item Id="UserSettings" ViewId="ModelDifference_ListView" Caption="User Settings" IsNewNode="True" />
         </Items>
       </Item>
+      <Item Id="KPI" Index="95" />
     </Items>
   </NavigationItems>
   <Options DataAccessMode="Server">

@@ -56,6 +56,11 @@ public class LabBIEFCoreDbContext : DbContext {
     public DbSet<Invoice> Invoice { get; set; }
     public DbSet<InvoiceItem> InvoiceItem { get; set; }
     public DbSet<Sample> Sample { get; set; }
+    public DbSet<Account> Account { get; set; }
+    public DbSet<Analysis> Analysis { get; set; }
+    public DbSet<AnalysisApproval> AnalysisApproval { get; set; }
+    public DbSet<AnalysisTypes> AnalysisTypes { get; set; }
+
 
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -88,8 +93,12 @@ public class LabBIEFCoreDbContext : DbContext {
            .HasName("PK_INVOICE_ITEM_INVOICE_ITEM_NO");
 
         modelBuilder.Entity<Sample>()
-   .HasKey(ii => ii.SampleNumber)
-   .HasName("PK_SAMPLE_SAMPLE_NUMBER");
+            .HasKey(ii => ii.SampleNumber)
+            .HasName("PK_SAMPLE_SAMPLE_NUMBER");
+
+        modelBuilder.Entity<Account>()
+            .HasKey(ii => ii.AccountNumber)
+            .HasName("PK_ACCOUNT_ACCOUNT_NUMBER");
 
         //modelBuilder.Entity<InvoiceItem>()
         //    .HasOne(ii => ii.InvoiceNumber)
