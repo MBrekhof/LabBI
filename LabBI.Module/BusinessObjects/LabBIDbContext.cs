@@ -55,11 +55,15 @@ public class LabBIEFCoreDbContext : DbContext {
     public DbSet<Event> Event { get; set; }
     public DbSet<Invoice> Invoice { get; set; }
     public DbSet<InvoiceItem> InvoiceItem { get; set; }
+    public DbSet<Sample> Sample { get; set; }
 
-    protected override void OnModelCreating(ModelBuilder modelBuilder) {
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
         base.OnModelCreating(modelBuilder);
         modelBuilder.HasChangeTrackingStrategy(ChangeTrackingStrategy.ChangingAndChangedNotificationsWithOriginalValues);
-        modelBuilder.Entity<LabBI.Module.BusinessObjects.ApplicationUserLoginInfo>(b => {
+        modelBuilder.Entity<LabBI.Module.BusinessObjects.ApplicationUserLoginInfo>(b =>
+        {
             b.HasIndex(nameof(DevExpress.ExpressApp.Security.ISecurityUserLoginInfo.LoginProviderName), nameof(DevExpress.ExpressApp.Security.ISecurityUserLoginInfo.ProviderUserKey)).IsUnique();
         });
         modelBuilder.Entity<AuditEFCoreWeakReference>()
@@ -82,6 +86,10 @@ public class LabBIEFCoreDbContext : DbContext {
         modelBuilder.Entity<InvoiceItem>()
            .HasKey(ii => ii.InvoiceItemNo)
            .HasName("PK_INVOICE_ITEM_INVOICE_ITEM_NO");
+
+        modelBuilder.Entity<Sample>()
+   .HasKey(ii => ii.SampleNumber)
+   .HasName("PK_SAMPLE_SAMPLE_NUMBER");
 
         //modelBuilder.Entity<InvoiceItem>()
         //    .HasOne(ii => ii.InvoiceNumber)

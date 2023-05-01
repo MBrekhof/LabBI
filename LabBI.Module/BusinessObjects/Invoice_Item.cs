@@ -67,7 +67,6 @@ namespace LabBI.Module.BusinessObjects
         [Column("CATALOGUE_ITEM_NO")]
         public virtual int? CatalogueItemNo { get; set; }
 
-       // public virtual Invoice Invoice { get; set; }
     }
 
 }

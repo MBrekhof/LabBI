@@ -12,7 +12,7 @@
       </Item>
     </Items>
   </NavigationItems>
-  <Options>
+  <Options DataAccessMode="Server">
     <LayoutManagerOptions RequiredFieldMark="*" />
   </Options>
   <SchemaModules>
