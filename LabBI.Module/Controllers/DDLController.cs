@@ -17,11 +17,11 @@ using System.Text;
 namespace LabBI.Module.Controllers
 {
     // For more typical usage scenarios, be sure to check out https://documentation.devexpress.com/eXpressAppFramework/clsDevExpressExpressAppViewControllertopic.aspx.
-    public partial class DDLController : ViewController
+    public  partial class DDLController : ViewController
     {
         // Use CodeRush to create Controllers and Actions with a few keystrokes.
         // https://docs.devexpress.com/CodeRushForRoslyn/403133/
-        public DDLController()
+        public  DDLController()
         {
             InitializeComponent();
             // Target required Views (via the TargetXXX properties) and create their Actions.

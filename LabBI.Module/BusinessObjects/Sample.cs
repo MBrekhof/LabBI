@@ -13,7 +13,7 @@ namespace LabBI.Module.BusinessObjects
     [DefaultClassOptions]
     [NavigationItem("Samples")]
     [DefaultProperty("SampleNumber")]
-    public class Sample : BaseObjectNoID
+    public  class Sample : BaseObjectNoID
     {
         [Key]
         [Column("SAMPLE_NUMBER")]

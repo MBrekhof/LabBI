@@ -9,9 +9,9 @@ using DevExpress.ExpressApp.Security;
 namespace LabBI.Module.BusinessObjects;
 
 [Table("PermissionPolicyUserLoginInfo")]
-public class ApplicationUserLoginInfo : ISecurityUserLoginInfo {
+public  class ApplicationUserLoginInfo : ISecurityUserLoginInfo {
 
-    public ApplicationUserLoginInfo() { }
+    public  ApplicationUserLoginInfo() { }
 
     [Browsable(false)]
     public virtual Guid ID { get; protected set; }

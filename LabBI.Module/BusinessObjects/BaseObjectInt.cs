@@ -17,7 +17,7 @@ using System.Text;
 // preferred way to define a Key
 namespace LabBI.Module.BusinessObjects
 {
-    public abstract class BaseObjectInt : IXafEntityObject, IObjectSpaceLink
+    public  abstract class BaseObjectInt : IXafEntityObject, IObjectSpaceLink
     {
         protected IObjectSpace ObjectSpace;
 

@@ -3,22 +3,22 @@ using Microsoft.EntityFrameworkCore;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-namespace LabBI.Module.BusinessObjects.BusinessObjects;
+namespace LabBI.Module.BusinessObjects;
 
 [PrimaryKey("Name", "Version")]
 [Table("CATALOGUE")]
 //[Index("Name", Name = "CATALOGUE_NAM15097")]
 [DefaultClassOptions]
-[NavigationItem("Samples")]
+[NavigationItem("Catalogue")]
 [DefaultProperty("Name")]
 
-public partial class Catalogue : BaseObjectNoID
+public  partial class Catalogue : BaseObjectNoID
 {
     [Key]
     [Column("NAME")]
     [StringLength(20)]
-    [Unicode(false)]
     [VisibleInListView(true), VisibleInLookupListView(true)]
+
 
     public virtual string Name { get; set; }
 
@@ -29,8 +29,8 @@ public partial class Catalogue : BaseObjectNoID
 
     [Column("CHANGED_BY")]
     [StringLength(20)]
-    [Unicode(false)]
     [VisibleInListView(false), VisibleInLookupListView(false)]
+
     public virtual string ChangedBy { get; set; }
 
     [Column("CHANGED_ON", TypeName = "datetime")]
@@ -39,25 +39,22 @@ public partial class Catalogue : BaseObjectNoID
 
     [Column("REMOVED")]
     [StringLength(1)]
-    [Unicode(false)]
-    [VisibleInListView(true), VisibleInLookupListView(true)]
+    [VisibleInListView(false), VisibleInLookupListView(false)]
+
     public virtual string Removed { get; set; }
 
     [Column("DESCRIPTION")]
     [StringLength(254)]
-    [Unicode(false)]
-    [VisibleInListView(true), VisibleInLookupListView(true)]
+    [VisibleInListView(false), VisibleInLookupListView(false)]
     public virtual string Description { get; set; }
 
     [Column("GROUP_NAME")]
     [StringLength(25)]
-    [Unicode(false)]
     [VisibleInListView(false), VisibleInLookupListView(false)]
     public virtual string GroupName { get; set; }
 
     [Column("EXT_LINK")]
     [StringLength(254)]
-    [Unicode(false)]
     [VisibleInListView(false), VisibleInLookupListView(false)]
     public virtual string ExtLink { get; set; }
 
@@ -67,19 +64,16 @@ public partial class Catalogue : BaseObjectNoID
 
     [Column("APPROVED")]
     [StringLength(1)]
-    [Unicode(false)]
     [VisibleInListView(false), VisibleInLookupListView(false)]
     public virtual string Approved { get; set; }
 
     [Column("APPROVAL_GROUP")]
     [StringLength(10)]
-    [Unicode(false)]
     [VisibleInListView(false), VisibleInLookupListView(false)]
     public virtual string ApprovalGroup { get; set; }
 
     [Column("READY_FOR_APPROVAL")]
     [StringLength(1)]
-    [Unicode(false)]
     [VisibleInListView(false), VisibleInLookupListView(false)]
     public virtual string ReadyForApproval { get; set; }
 
@@ -89,37 +83,31 @@ public partial class Catalogue : BaseObjectNoID
 
     [Column("ACTIVE_FLAG")]
     [StringLength(1)]
-    [Unicode(false)]
     [VisibleInListView(false), VisibleInLookupListView(false)]
     public virtual string ActiveFlag { get; set; }
 
     [Column("CATALOGUE_CURRENCY")]
     [StringLength(20)]
-    [Unicode(false)]
     [VisibleInListView(false), VisibleInLookupListView(false)]
     public virtual string CatalogueCurrency { get; set; }
 
     [Column("SEARCH_TEMPLATE")]
     [StringLength(20)]
-    [Unicode(false)]
     [VisibleInListView(false), VisibleInLookupListView(false)]
     public virtual string SearchTemplate { get; set; }
 
     [Column("DEFAULT_TAX_GROUP")]
     [StringLength(20)]
-    [Unicode(false)]
     [VisibleInListView(false), VisibleInLookupListView(false)]
     public virtual string DefaultTaxGroup { get; set; }
 
     [Column("QUANT_PRICE_IS_DISC")]
     [StringLength(1)]
-    [Unicode(false)]
     [VisibleInListView(false), VisibleInLookupListView(false)]
     public virtual string QuantPriceIsDisc { get; set; }
 
     [Column("REPORT_FORMAT")]
     [StringLength(20)]
-    [Unicode(false)]
     [VisibleInListView(false), VisibleInLookupListView(false)]
     public virtual string ReportFormat { get; set; }
 

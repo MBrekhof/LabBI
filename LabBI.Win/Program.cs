@@ -24,7 +24,7 @@ static class Program {
     /// The main entry point for the application.
     /// </summary>
     [STAThread]
-    public static int Main(string[] args) {
+    public  static int Main(string[] args) {
         if(ContainsArgument(args, "help") || ContainsArgument(args, "h")) {
             Console.WriteLine("Updates the database when its version does not match the application's version.");
             Console.WriteLine();

@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace LabBI.Module.BusinessObjects
 {
-    public abstract class BaseObjectNoID : IXafEntityObject, IObjectSpaceLink
+    public  abstract class BaseObjectNoID : IXafEntityObject, IObjectSpaceLink
     {
         protected IObjectSpace ObjectSpace;
 

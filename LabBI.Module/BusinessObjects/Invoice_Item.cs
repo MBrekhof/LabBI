@@ -9,7 +9,7 @@ namespace LabBI.Module.BusinessObjects
     [DefaultClassOptions]
     [NavigationItem("Invoices")]
     [Table("INVOICE_ITEM")]
-    public class InvoiceItem : BaseObjectNoID
+    public  class InvoiceItem : BaseObjectNoID
     {
         [Column("INVOICE_NUMBER")]
         public virtual int? InvoiceId { get; set; }

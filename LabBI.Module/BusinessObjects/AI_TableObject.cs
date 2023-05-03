@@ -16,13 +16,13 @@ using System.Text;
 
 namespace LabBI.Module.BusinessObjects
 {
-    // Register this entity in your DbContext (usually in the BusinessObjects folder of your project) with the "public DbSet<AI_TableObject> AI_TableObjects { get; set; }" syntax.
+    // Register this entity in your DbContext (usually in the BusinessObjects folder of your project) with the "public virtual DbSet<AI_TableObject> AI_TableObjects { get; set; }" syntax.
     [DefaultClassOptions]
 
     // (see https://learn.microsoft.com/en-us/ef/core/change-tracking/change-detection#change-tracking-proxies for details).
-    public class AI_TableObject : BaseObjectInt
+    public  class AI_TableObject : BaseObjectInt
     {
-        public AI_TableObject()
+        public  AI_TableObject()
         {
             // In the constructor, initialize collection properties, e.g.: 
             // this.AssociatedEntities = new ObservableCollection<AssociatedEntityObject>();

@@ -17,8 +17,8 @@ using DevExpress.Persistent.BaseImpl.EFCore.AuditTrail;
 namespace LabBI.Win;
 
 // For more typical usage scenarios, be sure to check out https://docs.devexpress.com/eXpressAppFramework/DevExpress.ExpressApp.Win.WinApplication._members
-public class LabBIWindowsFormsApplication : WinApplication {
-    public LabBIWindowsFormsApplication() {
+public  class LabBIWindowsFormsApplication : WinApplication {
+    public  LabBIWindowsFormsApplication() {
 		SplashScreen = new DXSplashScreen(typeof(XafSplashScreen), new DefaultOverlayFormOptions());
         ApplicationName = "LabBI";
         CheckCompatibilityType = DevExpress.ExpressApp.CheckCompatibilityType.DatabaseSchema;

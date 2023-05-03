@@ -9,7 +9,7 @@ using DevExpress.Utils.Svg;
 using DevExpress.XtraSplashScreen;
 
 namespace LabBI.Win {
-    public partial class XafSplashScreen : SplashScreen {
+    public  partial class XafSplashScreen : SplashScreen {
 		private void LoadBlankLogo() {
             Assembly assembly = Assembly.GetExecutingAssembly();
             string blankLogoResourceName = assembly.GetName().Name + ".Images.Logo.svg";
@@ -32,7 +32,7 @@ namespace LabBI.Win {
             newLeft = (Width - labelSubtitle.Width) / 2;
             labelSubtitle.Location = new Point(newLeft, labelSubtitle.Top);
         }
-        public XafSplashScreen() {
+        public  XafSplashScreen() {
             InitializeComponent();
 			LoadBlankLogo();
             this.labelCopyright.Text = "Copyright © " + DateTime.Now.Year.ToString() + " Company Name" +  System.Environment.NewLine + "All rights reserved.";
@@ -41,7 +41,7 @@ namespace LabBI.Win {
         
         #region Overrides
 
-        public override void ProcessCommand(Enum cmd, object arg) {
+        public  override void ProcessCommand(Enum cmd, object arg) {
             base.ProcessCommand(cmd, arg);
             if((UpdateSplashCommand)cmd == UpdateSplashCommand.Description) {
                 labelStatus.Text = (string)arg;

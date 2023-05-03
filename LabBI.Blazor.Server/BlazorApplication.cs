@@ -11,8 +11,8 @@ using DevExpress.EntityFrameworkCore.Security;
 
 namespace LabBI.Blazor.Server;
 
-public class LabBIBlazorApplication : BlazorApplication {
-    public LabBIBlazorApplication() {
+public  class LabBIBlazorApplication : BlazorApplication {
+    public  LabBIBlazorApplication() {
         ApplicationName = "LabBI";
         CheckCompatibilityType = DevExpress.ExpressApp.CheckCompatibilityType.DatabaseSchema;
         DatabaseVersionMismatch += LabBIBlazorApplication_DatabaseVersionMismatch;

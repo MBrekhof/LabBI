@@ -13,7 +13,7 @@ namespace LabBI.Module.BusinessObjects;
 
 // This code allows our Model Editor to get relevant EF Core metadata at design time.
 // For details, please refer to https://supportcenter.devexpress.com/ticket/details/t933891.
-public class LabBIContextInitializer : DbContextTypesInfoInitializerBase {
+public  class LabBIContextInitializer : DbContextTypesInfoInitializerBase {
 	protected override DbContext CreateDbContext() {
 		var optionsBuilder = new DbContextOptionsBuilder<LabBIEFCoreDbContext>()
             .UseSqlServer(";")
@@ -23,8 +23,8 @@ public class LabBIContextInitializer : DbContextTypesInfoInitializerBase {
 	}
 }
 //This factory creates DbContext for design-time services. For example, it is required for database migration.
-public class LabBIDesignTimeDbContextFactory : IDesignTimeDbContextFactory<LabBIEFCoreDbContext> {
-	public LabBIEFCoreDbContext CreateDbContext(string[] args) {
+public  class LabBIDesignTimeDbContextFactory : IDesignTimeDbContextFactory<LabBIEFCoreDbContext> {
+	public virtual LabBIEFCoreDbContext CreateDbContext(string[] args) {
 		//throw new InvalidOperationException("Make sure that the database connection string and connection provider are correct. After that, uncomment the code below and remove this exception.");
 		var optionsBuilder = new DbContextOptionsBuilder<LabBIEFCoreDbContext>();
 		optionsBuilder.UseSqlServer("Encrypt=false;Integrated Security=SSPI;Data Source=BCH-BTO;Initial Catalog=Labware8Migrate");
@@ -34,15 +34,15 @@ public class LabBIDesignTimeDbContextFactory : IDesignTimeDbContextFactory<LabBI
 	}
 }
 [TypesInfoInitializer(typeof(LabBIContextInitializer))]
-public class LabBIEFCoreDbContext : DbContext {
-	public LabBIEFCoreDbContext(DbContextOptions<LabBIEFCoreDbContext> options) : base(options) {
+public  class LabBIEFCoreDbContext : DbContext {
+	public  LabBIEFCoreDbContext(DbContextOptions<LabBIEFCoreDbContext> options) : base(options) {
 	}
-	//public DbSet<ModuleInfo> ModulesInfo { get; set; }
-	public DbSet<ModelDifference> ModelDifferences { get; set; }
-	public DbSet<ModelDifferenceAspect> ModelDifferenceAspects { get; set; }
-	public DbSet<PermissionPolicyRole> Roles { get; set; }
-	public DbSet<LabBI.Module.BusinessObjects.ApplicationUser> Users { get; set; }
-    public DbSet<LabBI.Module.BusinessObjects.ApplicationUserLoginInfo> UserLoginInfos { get; set; }
+	//public virtual DbSet<ModuleInfo> ModulesInfo { get; set; }
+	public  DbSet<ModelDifference> ModelDifferences { get; set; }
+	public  DbSet<ModelDifferenceAspect> ModelDifferenceAspects { get; set; }
+	public  DbSet<PermissionPolicyRole> Roles { get; set; }
+	public  DbSet<LabBI.Module.BusinessObjects.ApplicationUser> Users { get; set; }
+    public  DbSet<LabBI.Module.BusinessObjects.ApplicationUserLoginInfo> UserLoginInfos { get; set; }
 	public DbSet<FileData> FileData { get; set; }
 	public DbSet<ReportDataV2> ReportDataV2 { get; set; }
 	public DbSet<KpiDefinition> KpiDefinition { get; set; }
@@ -60,9 +60,10 @@ public class LabBIEFCoreDbContext : DbContext {
     public DbSet<Analysis> Analysis { get; set; }
     public DbSet<AnalysisApproval> AnalysisApproval { get; set; }
     public DbSet<AnalysisTypes> AnalysisTypes { get; set; }
+    public DbSet<Component> Component { get; set; } 
 
-
-
+    public DbSet<ContainerType> ContainerType { get; set; }
+    public DbSet<Customer> Customer { get; set; }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
@@ -112,11 +113,11 @@ public class LabBIEFCoreDbContext : DbContext {
 }
 
 
-public class LabBIAuditingDbContext : DbContext {
-    public LabBIAuditingDbContext(DbContextOptions<LabBIAuditingDbContext> options) : base(options) {
+public  class LabBIAuditingDbContext : DbContext {
+    public  LabBIAuditingDbContext(DbContextOptions<LabBIAuditingDbContext> options) : base(options) {
     }
-    public DbSet<AuditDataItemPersistent> AuditData { get; set; }
-    public DbSet<AuditEFCoreWeakReference> AuditEFCoreWeakReference { get; set; }
+    public  DbSet<AuditDataItemPersistent> AuditData { get; set; }
+    public  DbSet<AuditEFCoreWeakReference> AuditEFCoreWeakReference { get; set; }
 
 	protected override void OnModelCreating(ModelBuilder modelBuilder) {
         base.OnModelCreating(modelBuilder);

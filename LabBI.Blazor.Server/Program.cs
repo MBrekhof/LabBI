@@ -7,11 +7,11 @@ using DevExpress.ExpressApp.Utils;
 
 namespace LabBI.Blazor.Server;
 
-public class Program : IDesignTimeApplicationFactory {
+public  class Program : IDesignTimeApplicationFactory {
     private static bool ContainsArgument(string[] args, string argument) {
         return args.Any(arg => arg.TrimStart('/').TrimStart('-').ToLower() == argument.ToLower());
     }
-    public static int Main(string[] args) {
+    public  static int Main(string[] args) {
         if(ContainsArgument(args, "help") || ContainsArgument(args, "h")) {
             Console.WriteLine("Updates the database when its version does not match the application's version.");
             Console.WriteLine();
@@ -38,7 +38,7 @@ public class Program : IDesignTimeApplicationFactory {
         }
         return 0;
     }
-    public static IHostBuilder CreateHostBuilder(string[] args) =>
+    public  static IHostBuilder CreateHostBuilder(string[] args) =>
         Host.CreateDefaultBuilder(args)
             .ConfigureWebHostDefaults(webBuilder => {
                 webBuilder.UseStartup<Startup>();

@@ -14,10 +14,10 @@ namespace LabBI.WebApi.Reports;
 [Authorize]
 [Route("api/[controller]")]
 // This is a WebApi Reports controller sample.
-public class ReportController : ControllerBase {
+public  class ReportController : ControllerBase {
     private readonly IReportExportService service;
 
-    public ReportController(IReportExportService reportExportService) {
+    public  ReportController(IReportExportService reportExportService) {
         service = reportExportService;
     }
 
@@ -49,7 +49,7 @@ public class ReportController : ControllerBase {
     }
 
     [HttpGet("DownloadByKey({key})")]
-    public async Task<object> DownloadByKey(string key,
+    public  async Task<object> DownloadByKey(string key,
         [FromQuery] ExportTarget fileType = ExportTarget.Pdf,
         [FromQuery] string? criteria = null) {
         using var report = service.LoadReport<ReportDataV2>(key);
@@ -60,7 +60,7 @@ public class ReportController : ControllerBase {
     }
 
     [HttpGet("DownloadByName({displayName})")]
-    public async Task<object> DownloadByName(string displayName,
+    public  async Task<object> DownloadByName(string displayName,
         [FromQuery] ExportTarget fileType = ExportTarget.Pdf,
         [FromQuery] string? criteria = null) {
         if(!string.IsNullOrEmpty(displayName)) {

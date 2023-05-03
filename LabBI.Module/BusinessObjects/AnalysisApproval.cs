@@ -9,9 +9,9 @@ namespace LabBI.Module.BusinessObjects;
 [PrimaryKey("UserName", "Analysis")]
 [Table("ANALYSIS_APPROVAL")]
 [DefaultClassOptions]
-[NavigationItem("Samples")]
+[NavigationItem("Analysis")]
 [DefaultProperty("Analysis")]
-public  partial class AnalysisApproval :BaseObjectNoID
+public   partial class AnalysisApproval :BaseObjectNoID
 {
     [Key]
     [Column("USER_NAME")]

@@ -14,8 +14,8 @@ using DevExpress.ExpressApp.Design;
 
 namespace LabBI.Win;
 
-public class ApplicationBuilder : IDesignTimeApplicationFactory {
-    public static WinApplication BuildApplication(string connectionString) {
+public  class ApplicationBuilder : IDesignTimeApplicationFactory {
+    public  static WinApplication BuildApplication(string connectionString) {
         var builder = WinApplication.CreateBuilder();
         builder.UseApplication<LabBIWindowsFormsApplication>();
         builder.Modules

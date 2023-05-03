@@ -10,12 +10,12 @@ namespace LabBI.Module.BusinessObjects
 {
 
     [DefaultClassOptions]
-    [NavigationItem("Samples")]
+    [NavigationItem("Analysis")]
     [DefaultProperty("Name")]
 
     [Table("ANALYSIS")]
     [PrimaryKey(nameof(Name), nameof(Version))]
-    public class Analysis : BaseObjectNoID
+    public  class Analysis : BaseObjectNoID
     {
         [VisibleInListView(true), VisibleInLookupListView(true)]
         [Column("NAME"), MaxLength(20), Required]

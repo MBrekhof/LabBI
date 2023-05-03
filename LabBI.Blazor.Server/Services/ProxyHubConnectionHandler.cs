@@ -7,7 +7,7 @@ namespace LabBI.Blazor.Server.Services;
 
 internal class ProxyHubConnectionHandler<THub> : HubConnectionHandler<THub> where THub : Hub {
     private readonly IValueManagerStorageContainerInitializer storageContainerInitializer;
-    public ProxyHubConnectionHandler(
+    public  ProxyHubConnectionHandler(
         HubLifetimeManager<THub> lifetimeManager,
         IHubProtocolResolver protocolResolver,
         IOptions<HubOptions> globalHubOptions,
@@ -20,7 +20,7 @@ internal class ProxyHubConnectionHandler<THub> : HubConnectionHandler<THub> wher
         this.storageContainerInitializer = storageContainerAccessor;
     }
 
-    public override Task OnConnectedAsync(ConnectionContext connection) {
+    public  override Task OnConnectedAsync(ConnectionContext connection) {
         storageContainerInitializer.Initialize();
         return base.OnConnectedAsync(connection);
     }

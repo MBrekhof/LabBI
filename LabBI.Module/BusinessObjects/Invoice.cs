@@ -1,7 +1,5 @@
 ﻿using DevExpress.ExpressApp.DC;
 using DevExpress.Persistent.Base;
-
-using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
@@ -12,7 +10,7 @@ namespace LabBI.Module.BusinessObjects
     [DefaultClassOptions]
     [NavigationItem("Invoices")]
     [DefaultProperty("InvoiceNumber")]
-    public  class Invoice : BaseObjectNoID
+    public   class Invoice : BaseObjectNoID
     {
         [Key]
         [Column("INVOICE_NUMBER")]

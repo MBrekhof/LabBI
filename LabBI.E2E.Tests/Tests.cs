@@ -15,25 +15,25 @@ using Xunit;
 
 namespace LabBI.Module.E2E.Tests;
 
-public class LabBITests : IDisposable {
+public  class LabBITests : IDisposable {
     const string BlazorAppName = "LabBIBlazor";
     const string WinAppName = "LabBIWin";
     const string AppDBName = "LabBI";
     EasyTestFixtureContext FixtureContext { get; } = new EasyTestFixtureContext();
 
-	public LabBITests() {
+	public  LabBITests() {
         FixtureContext.RegisterApplications(
             new BlazorApplicationOptions(BlazorAppName, string.Format(@"{0}\..\..\..\..\LabBI.Blazor.Server", Environment.CurrentDirectory)),
             new WinApplicationOptions(WinAppName, string.Format(@"{0}\..\..\..\..\LabBI.Win\bin\EasyTest\net6.0-windows\LabBI.Win.exe", Environment.CurrentDirectory))
         );
         FixtureContext.RegisterDatabases(new DatabaseOptions(AppDBName, "LabBIEasyTest", server: @"(localdb)\mssqllocaldb"));	           
 	}
-    public void Dispose() {
+    public  void Dispose() {
         FixtureContext.CloseRunningApplications();
     }
     [Theory]
     [InlineData(BlazorAppName)]
-    public void TestBlazorApp(string applicationName) {
+    public  void TestBlazorApp(string applicationName) {
         FixtureContext.DropDB(AppDBName);
         var appContext = FixtureContext.CreateApplicationContext(applicationName);
         appContext.RunApplication();
@@ -48,7 +48,7 @@ public class LabBITests : IDisposable {
     }
     [Theory]
     [InlineData(WinAppName)]
-    public void TestWinApp(string applicationName) {
+    public  void TestWinApp(string applicationName) {
         FixtureContext.DropDB(AppDBName);
         var appContext = FixtureContext.CreateApplicationContext(applicationName);
         appContext.RunApplication();

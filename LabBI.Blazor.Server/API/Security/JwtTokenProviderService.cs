@@ -8,15 +8,15 @@ using Microsoft.IdentityModel.Tokens;
 
 namespace LabBI.WebApi.JWT;
 
-public class JwtTokenProviderService : IAuthenticationTokenProvider {
+public  class JwtTokenProviderService : IAuthenticationTokenProvider {
     readonly IStandardAuthenticationService securityAuthenticationService;
     readonly IConfiguration configuration;
 
-    public JwtTokenProviderService(IStandardAuthenticationService securityAuthenticationService, IConfiguration configuration) {
+    public  JwtTokenProviderService(IStandardAuthenticationService securityAuthenticationService, IConfiguration configuration) {
         this.securityAuthenticationService = securityAuthenticationService;
         this.configuration = configuration;
     }
-    public string Authenticate(object logonParameters) {
+    public  string Authenticate(object logonParameters) {
         ClaimsPrincipal user = securityAuthenticationService.Authenticate(logonParameters);
 
         if(user != null) {

@@ -19,19 +19,20 @@ using LabBI.WebApi.JWT;
 using DevExpress.ExpressApp.Security.Authentication;
 using DevExpress.ExpressApp.Security.Authentication.ClientServer;
 using DevExpress.ExpressApp.Core;
+using LabBI.Module.BusinessObjects;
 
 namespace LabBI.Blazor.Server;
 
-public class Startup {
-    public Startup(IConfiguration configuration) {
+public  class Startup {
+    public  Startup(IConfiguration configuration) {
         Configuration = configuration;
     }
 
-    public IConfiguration Configuration { get; }
+    public  IConfiguration Configuration { get; }
 
     // This method gets called by the runtime. Use this method to add services to the container.
     // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
-    public void ConfigureServices(IServiceCollection services) {
+    public  void ConfigureServices(IServiceCollection services) {
         services.AddSingleton(typeof(Microsoft.AspNetCore.SignalR.HubConnectionHandler<>), typeof(ProxyHubConnectionHandler<>));
 
         services.AddRazorPages();
@@ -141,6 +142,8 @@ public class Startup {
         services
             .AddXafWebApi(Configuration, options => {
                 // Use options.BusinessObject<YourBusinessObject>() to make the Business Object available in the Web API and generate the GET, POST, PUT, and DELETE HTTP methods for it.
+                options.BusinessObject<Account>();
+                options.BusinessObject<Customer>();
             });
         services
             .AddControllers()
@@ -180,7 +183,7 @@ public class Startup {
     }
 
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-    public void Configure(IApplicationBuilder app, IWebHostEnvironment env) {
+    public  void Configure(IApplicationBuilder app, IWebHostEnvironment env) {
         if(env.IsDevelopment()) {
             app.UseDeveloperExceptionPage();
             app.UseSwagger();
@@ -200,7 +203,8 @@ public class Startup {
         app.UseAuthentication();
         app.UseAuthorization();
         app.UseXaf();
-        app.UseEndpoints(endpoints => {
+        app.UseEndpoints(endpoints =>
+        {
             endpoints.MapXafEndpoints();
             endpoints.MapBlazorHub();
             endpoints.MapFallbackToPage("/_Host");

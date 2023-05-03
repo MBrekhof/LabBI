@@ -9,11 +9,11 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace LabBI.Module.BusinessObjects;
 
 [DefaultClassOptions]
-[NavigationItem("Samples")]
+[NavigationItem("Analysis")]
 [DefaultProperty("Name")]
 
 [Table("ANALYSIS_TYPES")]
-public  partial class AnalysisTypes :BaseObjectNoID
+public   partial class AnalysisTypes :BaseObjectNoID
 {
     [Key]
     [Column("NAME")]

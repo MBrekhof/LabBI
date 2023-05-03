@@ -1,8 +1,4 @@
-﻿using DevExpress.ExpressApp.DC;
-using DevExpress.Persistent.Base;
-
-using System;
-using System.Collections.ObjectModel;
+﻿using DevExpress.Persistent.Base;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -12,7 +8,7 @@ namespace LabBI.Module.BusinessObjects
     [DefaultClassOptions]
     [NavigationItem("CRM")]
     [DefaultProperty("AccountNumber")]
-    public class Account : BaseObjectNoID
+    public  class Account : BaseObjectNoID
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]

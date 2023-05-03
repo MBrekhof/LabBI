@@ -7,8 +7,8 @@ using DevExpress.Persistent.BaseImpl.EF.PermissionPolicy;
 namespace LabBI.Module.BusinessObjects;
 
 [DefaultProperty(nameof(UserName))]
-public class ApplicationUser : PermissionPolicyUser, ISecurityUserWithLoginInfo {
-    public ApplicationUser() : base() {
+public  class ApplicationUser : PermissionPolicyUser, ISecurityUserWithLoginInfo {
+    public  ApplicationUser() : base() {
         UserLogins = new ObservableCollection<ApplicationUserLoginInfo>();
     }
 

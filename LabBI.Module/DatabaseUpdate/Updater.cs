@@ -13,11 +13,11 @@ using DevExpress.Persistent.BaseImpl.EFCore.AuditTrail;
 namespace LabBI.Module.DatabaseUpdate;
 
 // For more typical usage scenarios, be sure to check out https://docs.devexpress.com/eXpressAppFramework/DevExpress.ExpressApp.Updating.ModuleUpdater
-public class Updater : ModuleUpdater {
-    public Updater(IObjectSpace objectSpace, Version currentDBVersion) :
+public  class Updater : ModuleUpdater {
+    public  Updater(IObjectSpace objectSpace, Version currentDBVersion) :
         base(objectSpace, currentDBVersion) {
     }
-    public override void UpdateDatabaseAfterUpdateSchema() {
+    public  override void UpdateDatabaseAfterUpdateSchema() {
         base.UpdateDatabaseAfterUpdateSchema();
         //string name = "MyName";
         //EntityObject1 theObject = ObjectSpace.FirstOrDefault<EntityObject1>(u => u.Name == name);
@@ -64,7 +64,7 @@ public class Updater : ModuleUpdater {
         ObjectSpace.CommitChanges(); //This line persists created object(s).
 #endif
     }
-    public override void UpdateDatabaseBeforeUpdateSchema() {
+    public  override void UpdateDatabaseBeforeUpdateSchema() {
         base.UpdateDatabaseBeforeUpdateSchema();
     }
     private PermissionPolicyRole CreateDefaultRole() {
