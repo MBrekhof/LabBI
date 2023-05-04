@@ -1,5 +1,6 @@
 ﻿using DevExpress.Persistent.Base;
 using Microsoft.EntityFrameworkCore;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -192,4 +193,5 @@ public partial class Customer : BaseObjectNoID
     [StringLength(20)]
     [VisibleInListView(false), VisibleInLookupListView(false)]
     public virtual string TReceiptTemplate { get; set; }
+    public virtual IList<Invoice> Invoices { get; set; } = new ObservableCollection<Invoice>();
 }

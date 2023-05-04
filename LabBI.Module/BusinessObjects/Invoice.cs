@@ -25,7 +25,8 @@ namespace LabBI.Module.BusinessObjects
         [Column("CUSTOMER")]
         [MaxLength(20)]
         [VisibleInListView(true), VisibleInLookupListView(true)]
-        public virtual string Customer { get; set; }
+        public virtual string Customername { get; set; }
+        public virtual Customer Customer { get; set; }
 
         [Column("INVOICE_ID")]
         [MaxLength(20)]

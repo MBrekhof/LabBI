@@ -146,10 +146,6 @@ public  class LabBIEFCoreDbContext : DbContext {
             .HasKey(ii => ii.SampleNumber)
             .HasName("PK_SAMPLE_SAMPLE_NUMBER");
 
-        modelBuilder.Entity<Account>()
-            .HasKey(ii => ii.AccountNumber)
-            .HasName("PK_ACCOUNT_ACCOUNT_NUMBER");
-
         //modelBuilder.Entity<InvoiceItem>()
         //    .HasOne(ii => ii.InvoiceNumber)
         //    .WithMany(i => i.InvoiceItems)
