@@ -138,12 +138,58 @@ public  class Startup {
                     .RequireXafAuthentication()
                     .Build();
         });
+ 
 
         services
             .AddXafWebApi(Configuration, options => {
                 // Use options.BusinessObject<YourBusinessObject>() to make the Business Object available in the Web API and generate the GET, POST, PUT, and DELETE HTTP methods for it.
                 options.BusinessObject<Account>();
                 options.BusinessObject<Customer>();
+                options.BusinessObject<Analysis>();
+                options.BusinessObject<AnalysisApproval>();
+                options.BusinessObject<AnalysisTypes>();
+                options.BusinessObject<CalcVariables>();
+                options.BusinessObject<Catalogue>();
+                options.BusinessObject<CatalogueItem>();
+                options.BusinessObject<CollectionRun>();
+                options.BusinessObject<CommonName>();
+                options.BusinessObject<Component>();
+                options.BusinessObject<ContainerType>();
+                options.BusinessObject<ContractQuote>();
+                options.BusinessObject<CostItem>();
+                options.BusinessObject<Customer>();
+                options.BusinessObject<Invoice>();
+                options.BusinessObject<InvoiceItem>();
+                options.BusinessObject<LabType>();
+                options.BusinessObject<List>();
+                options.BusinessObject<ListEntry>();
+                options.BusinessObject<Location>();
+                options.BusinessObject<Person>();
+                options.BusinessObject<Project>();
+                options.BusinessObject<QcSamples>();
+                options.BusinessObject<Sample>();
+                options.BusinessObject<SampleRules>();
+                options.BusinessObject<SamplingPoint>();
+                options.BusinessObject<TAnalysisMethod>();
+                options.BusinessObject<TaxGroup>();
+                options.BusinessObject<TaxPlan>();
+                options.BusinessObject<TCertification>();
+                options.BusinessObject<TCoaTemplate>();
+                options.BusinessObject<TContainerGroup>();
+                options.BusinessObject<TDistributionItem>();
+                options.BusinessObject<TDistributionList>();
+                options.BusinessObject<Test>();
+                options.BusinessObject<TestList>();
+                options.BusinessObject<TestListEntry>();
+                options.BusinessObject<TProgram>();
+                options.BusinessObject<TProgramItem>();
+                options.BusinessObject<TreatmentWorks>();
+                options.BusinessObject<TReportHeader>();
+                options.BusinessObject<TSampleType>();
+                options.BusinessObject<Units>();
+                options.BusinessObject<Versions>();
+                options.BusinessObject<WaterSource>();
+                options.BusinessObject<Zone>();
             });
         services
             .AddControllers()
@@ -186,16 +232,25 @@ public  class Startup {
     public  void Configure(IApplicationBuilder app, IWebHostEnvironment env) {
         if(env.IsDevelopment()) {
             app.UseDeveloperExceptionPage();
-            app.UseSwagger();
-            app.UseSwaggerUI(c => {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "LabBI WebApi v1");
-            });
+            //app.UseSwagger();
+            //app.UseSwaggerUI(c => {
+            //    c.SwaggerEndpoint("/swagger/v1/swagger.json", "LabBI WebApi v1");
+            //});
         }
         else {
             app.UseExceptionHandler("/Error");
             // The default HSTS value is 30 days. To change this for production scenarios, see: https://aka.ms/aspnetcore-hsts.
-            app.UseHsts();
+            //app.UseHsts();
         }
+        app.UseSwagger();
+        app.UseSwaggerUI(c =>
+        {
+#if DEBUG
+            c.SwaggerEndpoint("/swagger/v1/swagger.json", "LabBI WebApi");
+#else
+            c.SwaggerEndpoint("v1/swagger.json", "LabBI WebApi");
+#endif
+        });
         app.UseHttpsRedirection();
         app.UseRequestLocalization();
         app.UseStaticFiles();
