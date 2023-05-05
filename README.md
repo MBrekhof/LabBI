@@ -1,5 +1,6 @@
 # LabBI
 BI Dashboard for Labware
+(programmers: read the Wiki)
 
 This program is intended to provide some experimental BI Dashboard functionality for a Labware 8 database. The information can be usefull for other Labware users, if so please enjoy.
 
