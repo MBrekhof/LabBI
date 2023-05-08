@@ -9,169 +9,133 @@
    "OutputContextPath": null,
    "OutputPath": "BusinessObjects",
    "PreserveCasingWithRegex": true,
-   "ProjectRootNamespace": "LabBI.Module.BusinessObjects",
+   "ProjectRootNamespace": "LabBI.Module",
    "Schemas": null,
    "SelectedHandlebarsLanguage": 0,
    "SelectedToBeGenerated": 2,
    "Tables": [
       {
-         "Name": "[dbo].[CALC_VARIABLES]",
+         "Name": "[dbo].[BATCH_HDR_TEMPLATE]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[CATALOGUE]",
+         "Name": "[dbo].[BATCH_HDR_TMP_FLDS]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[CATALOGUE_ITEM]",
+         "Name": "[dbo].[BATCH_LINK]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[COLLECTION_RUN]",
+         "Name": "[dbo].[BATCH_OBJECTS]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[COMMON_NAME]",
+         "Name": "[dbo].[BATCH_PROTOCOL]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[COMPONENT]",
+         "Name": "[dbo].[BATCH_STANDARD]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[CONTAINER_TYPE]",
+         "Name": "[dbo].[C_ACCREDITATION]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[CONTRACT_QUOTE]",
+         "Name": "[dbo].[C_CHARACTER]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[COST_ITEM]",
+         "Name": "[dbo].[C_CHARACTER_DETAILS]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[CUSTOMER]",
+         "Name": "[dbo].[C_CNTRL_CRT_DATA]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[LAB_TYPE]",
+         "Name": "[dbo].[C_DISCLAIMER_CAT]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[LIST]",
+         "Name": "[dbo].[C_DISCLAIMER_REG]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[LIST_ENTRY]",
+         "Name": "[dbo].[C_DISCLAIMERS]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[LOCATION]",
+         "Name": "[dbo].[C_GEOVIEWER]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[PERSON]",
+         "Name": "[dbo].[C_MATRIX]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[PROJECT]",
+         "Name": "[dbo].[C_MATRIX_DETAILS]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[QC_SAMPLES]",
+         "Name": "[dbo].[C_OOS_DISTR_ITEM]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[REPORTS]",
+         "Name": "[dbo].[C_OOS_DISTR_LIST]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[SAMPLE_RULES]",
+         "Name": "[dbo].[C_PACKAGE]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[SAMPLING_POINT]",
+         "Name": "[dbo].[C_PACKAGE_DETAILS]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[T_ANALYSIS_METHOD]",
+         "Name": "[dbo].[C_PLATE_DETAILS]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[T_CERTIFICATION]",
+         "Name": "[dbo].[C_RESULT_SPEC]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[T_COA_TEMPLATE]",
+         "Name": "[dbo].[C_ROUNDING]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[T_CONTAINER_GROUP]",
+         "Name": "[dbo].[C_SAMPLE_PRIORITY]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[T_DISTRIBUTION_ITEM]",
+         "Name": "[dbo].[C_SAMPLED_BY]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[T_DISTRIBUTION_LIST]",
+         "Name": "[dbo].[C_SCAN_DETAILS]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[T_PROGRAM]",
+         "Name": "[dbo].[C_SPEC_CODE]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[T_PROGRAM_ITEM]",
+         "Name": "[dbo].[C_SPECIFICATIONS]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[T_REPORT_HEADER]",
+         "Name": "[dbo].[C_TRANSITION]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[T_SAMPLE_TYPE]",
+         "Name": "[dbo].[C_TWN]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[TAX_GROUP]",
-         "ObjectType": 0
-      },
-      {
-         "Name": "[dbo].[TAX_PLAN]",
-         "ObjectType": 0
-      },
-      {
-         "Name": "[dbo].[TEST]",
-         "ObjectType": 0
-      },
-      {
-         "Name": "[dbo].[TEST_LIST]",
-         "ObjectType": 0
-      },
-      {
-         "Name": "[dbo].[TEST_LIST_ENTRY]",
-         "ObjectType": 0
-      },
-      {
-         "Name": "[dbo].[TREATMENT_WORKS]",
-         "ObjectType": 0
-      },
-      {
-         "Name": "[dbo].[UNITS]",
-         "ObjectType": 0
-      },
-      {
-         "Name": "[dbo].[VERSIONS]",
-         "ObjectType": 0
-      },
-      {
-         "Name": "[dbo].[WATER_SOURCE]",
-         "ObjectType": 0
-      },
-      {
-         "Name": "[dbo].[ZONE]",
+         "Name": "[dbo].[FACILITY]",
          "ObjectType": 0
       }
    ],
