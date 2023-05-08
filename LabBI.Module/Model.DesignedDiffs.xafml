@@ -26,6 +26,91 @@
   </SchemaModules>
   <Views>
     <ListView Id="ApplicationUser_ListView" Caption="Users" />
+    <DetailView Id="Customer_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="82.38805970149254">
+            <LayoutGroup Id="Customer" RelativeSize="100">
+              <LayoutGroup Id="Customer_col1" RelativeSize="50">
+                <LayoutItem Id="Name" RelativeSize="6.237816764132553" />
+                <LayoutItem Id="GroupName" RelativeSize="4.678362573099415" />
+                <LayoutItem Id="Description" RelativeSize="4.678362573099415" />
+                <LayoutItem Id="CompanyName" RelativeSize="4.678362573099415" />
+                <LayoutGroup Id="Item1" ShowCaption="True" CaptionLocation="Top" Index="4" RelativeSize="36.06237816764133" Caption="Adres" IsCollapsibleGroup="True" IsGroupCollapsed="True" IsNewNode="True">
+                  <LayoutItem Id="Address1" ViewItem="Address1" Index="0" RelativeSize="20" IsNewNode="True" />
+                  <LayoutItem Id="Address2" ViewItem="Address2" Index="1" RelativeSize="15" IsNewNode="True" />
+                  <LayoutItem Id="Address3" ViewItem="Address3" Index="2" RelativeSize="15" IsNewNode="True" />
+                  <LayoutItem Id="Address4" ViewItem="Address4" Index="3" RelativeSize="15" IsNewNode="True" />
+                  <LayoutItem Id="Address5" ViewItem="Address5" Index="4" RelativeSize="15" IsNewNode="True" />
+                  <LayoutItem Id="Address6" ViewItem="Address6" Index="5" RelativeSize="20" IsNewNode="True" />
+                </LayoutGroup>
+                <LayoutItem Id="FaxNum" Index="5" RelativeSize="4.678362573099415" />
+                <LayoutItem Id="PhoneNum" Index="6" RelativeSize="4.678362573099415" />
+                <LayoutItem Id="Contact" Index="7" RelativeSize="4.678362573099415" />
+                <LayoutItem Id="CostFactor" Index="8" RelativeSize="4.678362573099415" />
+                <LayoutItem Id="ChangedOn" Index="9" RelativeSize="4.678362573099415" />
+                <LayoutItem Id="ChangedBy" Index="10" RelativeSize="4.678362573099415" />
+                <LayoutItem Id="Removed" Index="11" RelativeSize="4.678362573099415" />
+                <LayoutItem Id="ExtLink" Index="12" RelativeSize="4.678362573099415" />
+                <LayoutItem Id="ReportFormat" Index="13" RelativeSize="6.237816764132553" />
+                <LayoutItem Id="Address1" Removed="True" />
+                <LayoutItem Id="Address2" Removed="True" />
+                <LayoutItem Id="Address3" Removed="True" />
+                <LayoutItem Id="Address4" Removed="True" />
+                <LayoutItem Id="Address5" Removed="True" />
+                <LayoutItem Id="Address6" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Customer_col2" RelativeSize="50">
+                <LayoutItem Id="EmailAddr" RelativeSize="6.237816764132553" />
+                <LayoutItem Id="RecordSet" RelativeSize="4.678362573099415" />
+                <LayoutItem Id="TBadDebt" RelativeSize="4.678362573099415" Removed="True" />
+                <LayoutItem Id="TCertFormats" RelativeSize="4.678362573099415" Removed="True" />
+                <LayoutItem Id="TCoaTemplate" RelativeSize="4.678362573099415" Removed="True" />
+                <LayoutItem Id="TCoverLetter" RelativeSize="4.678362573099415" Removed="True" />
+                <LayoutItem Id="TCustomerGroup" RelativeSize="4.678362573099415" Removed="True" />
+                <LayoutItem Id="TEmail" RelativeSize="4.678362573099415" Removed="True" />
+                <LayoutItem Id="TPoRequired" RelativeSize="4.678362573099415" Removed="True" />
+                <LayoutItem Id="TPrepay" RelativeSize="4.678362573099415" Removed="True" />
+                <LayoutItem Id="TPrint" RelativeSize="4.678362573099415" Removed="True" />
+                <LayoutItem Id="TProspect" RelativeSize="4.678362573099415" Removed="True" />
+                <LayoutItem Id="TReceiptTemplate" RelativeSize="18.908382066276804" Removed="True" />
+                <LayoutItem Id="TReportTo" RelativeSize="4.678362573099415" Removed="True" />
+                <LayoutItem Id="TTestList" RelativeSize="4.678362573099415" Removed="True" />
+                <LayoutGroup Id="TVelden" Caption="TVelden" IsCollapsibleGroup="True" IsGroupCollapsed="True" ShowCaption="True" IsNewNode="True">
+                  <LayoutItem Id="TBadDebt" Index="2" ViewItem="TBadDebt" RelativeSize="4.678362573099415" ShowCaption="" IsNewNode="True" />
+                  <LayoutItem Id="TCertFormats" Index="3" ShowCaption="" ViewItem="TCertFormats" RelativeSize="4.678362573099415" IsNewNode="True" />
+                  <LayoutItem Id="TCoaTemplate" Index="4" ShowCaption="" ViewItem="TCoaTemplate" RelativeSize="4.678362573099415" IsNewNode="True" />
+                  <LayoutItem Id="TCoverLetter" Index="5" ShowCaption="" ViewItem="TCoverLetter" RelativeSize="4.678362573099415" IsNewNode="True" />
+                  <LayoutItem Id="TCustomerGroup" Index="6" ShowCaption="" ViewItem="TCustomerGroup" RelativeSize="4.678362573099415" IsNewNode="True" />
+                  <LayoutItem Id="TEmail" Index="7" ShowCaption="" ViewItem="TEmail" RelativeSize="4.678362573099415" IsNewNode="True" />
+                  <LayoutItem Id="TPoRequired" Index="8" ShowCaption="" ViewItem="TPoRequired" RelativeSize="4.678362573099415" IsNewNode="True" />
+                  <LayoutItem Id="TPrepay" Index="9" ShowCaption="" ViewItem="TPrepay" RelativeSize="4.678362573099415" IsNewNode="True" />
+                  <LayoutItem Id="TPrint" Index="10" ShowCaption="" ViewItem="TPrint" RelativeSize="4.678362573099415" IsNewNode="True" />
+                  <LayoutItem Id="TProspect" Index="11" ShowCaption="" ViewItem="TProspect" RelativeSize="4.678362573099415" IsNewNode="True" />
+                  <LayoutItem Id="TReportTo" Index="12" ShowCaption="" ViewItem="TReportTo" RelativeSize="4.678362573099415" IsNewNode="True" />
+                  <LayoutItem Id="TTestList" Index="13" ShowCaption="" ViewItem="TTestList" RelativeSize="4.678362573099415" IsNewNode="True" />
+                  <LayoutItem Id="TViewGroupData" Index="14" ShowCaption="" ViewItem="TViewGroupData" RelativeSize="4.678362573099415" IsNewNode="True" />
+                  <LayoutItem Id="TWeb" Index="15" ShowCaption="" ViewItem="TWeb" RelativeSize="4.678362573099415" IsNewNode="True" />
+                  <LayoutItem Id="TWebFolder" Index="16" ShowCaption="" ViewItem="TWebFolder" RelativeSize="4.678362573099415" IsNewNode="True" />
+                  <LayoutItem Id="TReceiptTemplate" Index="17" ShowCaption="" ViewItem="TReceiptTemplate" RelativeSize="18.908382066276804" IsNewNode="True" />
+                </LayoutGroup>
+                <LayoutItem Id="TViewGroupData" RelativeSize="4.678362573099415" Removed="True" />
+                <LayoutItem Id="TWeb" RelativeSize="4.678362573099415" Removed="True" />
+                <LayoutItem Id="TWebFolder" RelativeSize="4.678362573099415" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs" RelativeSize="17.611940298507463">
+            <LayoutGroup Id="Invoices" RelativeSize="100">
+              <LayoutItem Id="Invoices" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="Projects" RelativeSize="100">
+              <LayoutItem Id="Projects" RelativeSize="100" />
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
     <DetailView Id="Invoice_DetailView">
       <Layout>
         <LayoutGroup Id="Main" RelativeSize="100">
@@ -36,11 +121,11 @@
                 <LayoutItem Id="ContractNumber" RelativeSize="5.02092050209205" />
                 <LayoutItem Id="Customer" RelativeSize="5.02092050209205" />
                 <LayoutItem Id="InvoiceId" RelativeSize="5.02092050209205" />
-                <LayoutItem Id="PoNumber" RelativeSize="5.02092050209205" />
                 <LayoutGroup Id="Auto56e66e59-e848-42d2-b108-802a83b51bb9" ShowCaption="False" Caption="" Direction="Horizontal" Index="5" RelativeSize="5.02092050209205" IsNewNode="True">
                   <LayoutItem Id="ChangedBy" ViewItem="ChangedBy" Index="0" RelativeSize="50" IsNewNode="True" />
                   <LayoutItem Id="ChangedOn" ViewItem="ChangedOn" Index="1" RelativeSize="50" IsNewNode="True" />
                 </LayoutGroup>
+                <LayoutItem Id="PoNumber" RelativeSize="5.02092050209205" />
                 <LayoutGroup Id="Autob05adac2-82ce-442c-acbe-cb7a98630e42" ShowCaption="False" Caption="" Index="6" RelativeSize="25.10460251046025" IsNewNode="True">
                   <LayoutItem Id="GroupName" ViewItem="GroupName" Index="0" RelativeSize="20" IsNewNode="True" />
                   <LayoutItem Id="Closed" ViewItem="Closed" Index="1" RelativeSize="20" IsNewNode="True" />
@@ -104,7 +189,6 @@
     <ListView Id="Invoice_LookupListView">
       <Columns>
         <ColumnInfo Id="ContractNumber" Width="113" />
-        <ColumnInfo Id="Customer" Width="99" />
         <ColumnInfo Id="InvoiceId" Width="99" />
       </Columns>
     </ListView>

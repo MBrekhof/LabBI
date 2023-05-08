@@ -53,27 +53,33 @@ public  partial class Project : BaseObjectNoID
     public virtual DateTime? DateCreated { get; set; }
 
     [Column("DATE_RECEIVED", TypeName = "datetime")]
+    [VisibleInListView(false), VisibleInLookupListView(false)]
     public virtual DateTime? DateReceived { get; set; }
 
     [Column("DATE_STARTED", TypeName = "datetime")]
+    [VisibleInListView(false), VisibleInLookupListView(false)]
     public virtual DateTime? DateStarted { get; set; }
 
     [Column("DATE_COMPLETED", TypeName = "datetime")]
     public virtual DateTime? DateCompleted { get; set; }
 
     [Column("DATE_REVIEWED", TypeName = "datetime")]
+    [VisibleInListView(false), VisibleInLookupListView(false)]
     public virtual DateTime? DateReviewed { get; set; }
 
     [Column("DATE_UPDATED", TypeName = "datetime")]
+    [VisibleInListView(false), VisibleInLookupListView(false)]
     public virtual DateTime? DateUpdated { get; set; }
 
     [Column("COST_FACTOR")]
+    [VisibleInListView(false), VisibleInLookupListView(false)]
     public virtual float? CostFactor { get; set; }
 
     [Column("CUSTOMER")]
     [StringLength(20)]
-        [VisibleInListView(false), VisibleInLookupListView(false)]
-    public virtual string Customer { get; set; }
+
+    public virtual string Customername { get; set; }
+    public virtual Customer Customer { get; set; }
 
     [Column("CUSTOMER_CONTACT")]
     [StringLength(40)]
@@ -91,27 +97,35 @@ public  partial class Project : BaseObjectNoID
     public virtual string CreatedBy { get; set; }
 
     [Column("NUM_SAMPLES")]
+    [VisibleInListView(true), VisibleInLookupListView(true)]
     public virtual int? NumSamples { get; set; }
 
     [Column("NUM_U")]
+    [VisibleInListView(false), VisibleInLookupListView(false)]
     public virtual int? NumU { get; set; }
 
     [Column("NUM_I")]
+    [VisibleInListView(false), VisibleInLookupListView(false)]
     public virtual int? NumI { get; set; }
 
     [Column("NUM_P")]
+    [VisibleInListView(false), VisibleInLookupListView(false)]
     public virtual int? NumP { get; set; }
 
     [Column("NUM_C")]
+    [VisibleInListView(false), VisibleInLookupListView(false)]
     public virtual int? NumC { get; set; }
 
     [Column("NUM_A")]
+    [VisibleInListView(false), VisibleInLookupListView(false)]
     public virtual int? NumA { get; set; }
 
     [Column("NUM_R")]
+    [VisibleInListView(false), VisibleInLookupListView(false)]
     public virtual int? NumR { get; set; }
 
     [Column("NUM_X")]
+    [VisibleInListView(false), VisibleInLookupListView(false)]
     public virtual int? NumX { get; set; }
 
     [Column("EXT_LINK")]

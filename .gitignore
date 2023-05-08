@@ -400,3 +400,4 @@ LabBI.Module/UnusableNodes.xml
 *.dll
 Deploy/wwwroot
 Deploy
+LabBI.Module/UnusableNodes*.xml
