@@ -9,6 +9,7 @@ using DevExpress.Persistent.BaseImpl.EFCore.AuditTrail;
 using DevExpress.Persistent.BaseImpl.EF.Kpi;
 using LabBI.Module.BusinessObjects;
 
+
 namespace LabBI.Module.BusinessObjects;
 
 // This code allows our Model Editor to get relevant EF Core metadata at design time.
@@ -55,23 +56,31 @@ public class LabBIEFCoreDbContext : DbContext
     public DbSet<AuditDataItemPersistent> AuditData { get; set; }
     public DbSet<AuditEFCoreWeakReference> AuditEFCoreWeakReference { get; set; }
     public DbSet<Event> Event { get; set; }
-    public DbSet<Invoice> Invoice { get; set; }
-    public DbSet<InvoiceItem> InvoiceItem { get; set; }
-    public DbSet<Sample> Sample { get; set; }
     public DbSet<Account> Account { get; set; }
     public DbSet<Analysis> Analysis { get; set; }
     public DbSet<AnalysisApproval> AnalysisApproval { get; set; }
     public DbSet<AnalysisTypes> AnalysisTypes { get; set; }
-    public DbSet<Component> Component { get; set; }
-    public DbSet<ContainerType> ContainerType { get; set; }
-    public DbSet<Customer> Customer { get; set; }
+    public DbSet<Batch> Batch { get; set; }
+    public DbSet<BatchHdrTemplate> BatchHdrTemplate { get; set; }
+    public DbSet<BatchHdrTmpFlds> BatchHdrTmpFlds { get; set; }
+    public DbSet<BatchLink> BatchLink { get; set; }
+    public DbSet<BatchObjects> BatchObjects { get; set; }
+    public DbSet<BatchProtocol> BatchProtocol { get; set; }
+    public DbSet<BatchStandard> BatchStandard { get; set; }
+
     public DbSet<CalcVariables> CalcVariables { get; set; }
     public DbSet<Catalogue> Catalogue { get; set; }
     public DbSet<CatalogueItem> CatalogueItem { get; set; }
     public DbSet<CollectionRun> CollectionRun { get; set; }
     public DbSet<CommonName> CommonName { get; set; }
+    public DbSet<Component> Component { get; set; }
+    public DbSet<ContainerType> ContainerType { get; set; }
     public DbSet<ContractQuote> ContractQuote { get; set; }
     public DbSet<CostItem> CostItem { get; set; }
+    public DbSet<Customer> Customer { get; set; }
+    public DbSet<Instruments> Instruments { get; set; }
+    public DbSet<Invoice> Invoice { get; set; }
+    public DbSet<InvoiceItem> InvoiceItem { get; set; }
     public DbSet<LabType> LabType { get; set; }
     public DbSet<List> List { get; set; }
     public DbSet<ListEntry> ListEntry { get; set; }
@@ -79,6 +88,7 @@ public class LabBIEFCoreDbContext : DbContext
     public DbSet<Person> Person { get; set; }
     public DbSet<Project> Project { get; set; }
     public DbSet<QcSamples> QcSamples { get; set; }
+    public DbSet<Sample> Sample { get; set; }
     public DbSet<SampleRules> SampleRules { get; set; }
     public DbSet<SamplingPoint> SamplingPoint { get; set; }
     public DbSet<TAnalysisMethod> TAnalysisMethod { get; set; }
@@ -101,7 +111,7 @@ public class LabBIEFCoreDbContext : DbContext
     public DbSet<Versions> Versions { get; set; }
     public DbSet<WaterSource> WaterSource { get; set; }
     public DbSet<Zone> Zone { get; set; }
-    public DbSet<Batch> Batch { get; set; }
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);

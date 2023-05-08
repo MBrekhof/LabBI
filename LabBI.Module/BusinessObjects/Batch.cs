@@ -11,7 +11,7 @@ namespace LabBI.Module.BusinessObjects;
 //[Index("AnalysisLinkKey", Name = "BATCH_ANALYSIS8822")]
 //[Index("ChangeLinkKey", Name = "BATCH_CHANGE_L3652")]
 [DefaultClassOptions]
-[NavigationItem("BATCH")]
+[NavigationItem("Batch")]
 [DefaultProperty("NAME")]
 public  partial class Batch : BaseObjectNoID
 {
