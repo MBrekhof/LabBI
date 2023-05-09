@@ -40,10 +40,10 @@ public partial class CRounding
     public double? RoundTo { get; set; }
 
     [Column("MAX_LIMIT")]
-    public short MaxLimit { get; set; }
+    public virtual short MaxLimit { get; set; }
 
     [Column("ACTIVE")]
-    public short Active { get; set; }
+    public virtual short Active { get; set; }
 
     [Column("EFFECTIVE_DATE", TypeName = "date")]
     public DateTime EffectiveDate { get; set; }

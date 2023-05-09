@@ -7,16 +7,20 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace LabBI.Module.BusinessObjects;
 
 [Table("C_DISCLAIMER_CAT")]
-public partial class CDisclaimerCat
+[DefaultClassOptions]
+[NavigationItem("Disclaimers")]
+[DefaultProperty("Category")]
+public partial class CDisclaimerCat: BaseObjectNoID
 {
     [Key]
     [Column("CATEGORY")]
     [StringLength(20)]
+    [VisibleInListView(true), VisibleInLookupListView(true)]
     public virtual string Category { get; set; }
 
     [Column("REMOVED")]
     [StringLength(1)]
-    [VisibleInListView(false), VisibleInLookupListView(false)]
+    [VisibleInListView(true), VisibleInLookupListView(true)]
     public virtual string Removed { get; set; }
 
     [Column("CHANGED_BY")]

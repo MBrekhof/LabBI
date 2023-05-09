@@ -7,7 +7,10 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace LabBI.Module.BusinessObjects;
 
 [Table("C_DISCLAIMERS")]
-public partial class CDisclaimers
+[DefaultClassOptions]
+[NavigationItem("Disclaimers")]
+[DefaultProperty("Code")]
+public partial class CDisclaimers : BaseObjectNoID
 {
     [Key]
     [Column("SEQ_NUM")]
@@ -15,14 +18,19 @@ public partial class CDisclaimers
 
     [Column("NIVEAU")]
     [StringLength(20)]
+    [VisibleInListView(true), VisibleInLookupListView(true)]
     public virtual string Niveau { get; set; }
 
     [Column("CATEGORY")]
     [StringLength(20)]
-    public virtual string Category { get; set; }
+    [VisibleInListView(true), VisibleInLookupListView(true)]
+    public virtual string Categoryname { get; set; }
+    //[VisibleInListView(true), VisibleInLookupListView(true)]
+    //public virtual CDisclaimerCat Category { get; set; }
 
     [Column("CODE")]
     [StringLength(20)]
+    [VisibleInListView(true), VisibleInLookupListView(true)]
     public virtual string Code { get; set; }
 
     [Column("DISCLAIMER")]

@@ -35,10 +35,10 @@ public partial class CCharacterDetails
     public virtual string Value { get; set; }
 
     [Column("REPORTABLE")]
-    public short? Reportable { get; set; }
+    public virtual short? Reportable { get; set; }
 
     [Column("KM_ST")]
-    public short? KmSt { get; set; }
+    public virtual short? KmSt { get; set; }
 
     [Column("CREATED_BY")]
     [StringLength(20)]

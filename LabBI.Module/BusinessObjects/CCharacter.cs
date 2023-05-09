@@ -24,7 +24,7 @@ public partial class CCharacter
     public virtual string ObjectClass { get; set; }
 
     [Column("ORDER_NUMBER")]
-    public short? OrderNumber { get; set; }
+    public virtual short? OrderNumber { get; set; }
 
     [Required]
     [Column("CODE")]
@@ -37,7 +37,7 @@ public partial class CCharacter
     public virtual string Description { get; set; }
 
     [Column("PRINTEN")]
-    public short? Printen { get; set; }
+    public virtual short? Printen { get; set; }
 
     [Column("TYPE")]
     [StringLength(15)]

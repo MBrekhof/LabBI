@@ -1,5 +1,4 @@
 ﻿using DevExpress.Persistent.Base;
-using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -7,26 +6,33 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace LabBI.Module.BusinessObjects;
 
 [Table("C_DISCLAIMER_REG")]
-public partial class CDisclaimerReg
+[DefaultClassOptions]
+[NavigationItem("Disclaimers")]
+[DefaultProperty("ObjectType")]
+public partial class CDisclaimerReg : BaseObjectNoID
 {
     [Key]
     [Column("SEQ_NUM")]
+    [VisibleInListView(true), VisibleInLookupListView(true)]
     public virtual int SeqNum { get; set; }
 
     [Column("OBJECT_TYPE")]
     [StringLength(20)]
-    [VisibleInListView(false), VisibleInLookupListView(false)]
-    public virtual string ObjectType { get; set; }
+    [VisibleInListView(true), VisibleInLookupListView(true)]
+    public virtual string cObjectType { get; set; }
 
     [Column("OBJECT_ID")]
     public virtual int? ObjectId { get; set; }
 
     [Column("DISCLAIMER")]
-    public virtual int? Disclaimer { get; set; }
+    [VisibleInListView(true), VisibleInLookupListView(true)]
+    public virtual int? DisclaimerNr { get; set; }
+    //[VisibleInListView(true), VisibleInLookupListView(true)]
+    //public virtual CDisclaimers Disclaimer { get; set; }
 
     [Column("DESCRIPTION")]
     [StringLength(254)]
-    [VisibleInListView(false), VisibleInLookupListView(false)]
+    [VisibleInListView(true), VisibleInLookupListView(true)]
     public virtual string Description { get; set; }
 
     [Column("CHANGED_BY")]
@@ -44,6 +50,6 @@ public partial class CDisclaimerReg
 
     [Column("GROUP_NAME")]
     [StringLength(20)]
-    [VisibleInListView(false), VisibleInLookupListView(false)]
+    [VisibleInListView(true), VisibleInLookupListView(true)]
     public virtual string GroupName { get; set; }
 }

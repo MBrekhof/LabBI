@@ -67,10 +67,16 @@ public class LabBIEFCoreDbContext : DbContext
     public DbSet<BatchObjects> BatchObjects { get; set; }
     public DbSet<BatchProtocol> BatchProtocol { get; set; }
     public DbSet<BatchStandard> BatchStandard { get; set; }
-
+    public DbSet<CAccreditation> Accreditations { get; set; }
     public DbSet<CalcVariables> CalcVariables { get; set; }
     public DbSet<Catalogue> Catalogue { get; set; }
-    public DbSet<CatalogueItem> CatalogueItem { get; set; }
+    public DbSet<CatalogueItem> CatalogueItem { get; set; } 
+    public DbSet<CCharacter> Character { get; set; }
+    public DbSet<CCharacterDetails> CharacterDetails { get; set; }
+    public DbSet<CCntrlCrtData> cCntrlCrtData { get; set; }
+    public DbSet<CDisclaimerCat> DisclaimerCat { get; set; }
+    public DbSet<CDisclaimerReg> DisclaimerReg { get; set; }
+    public DbSet<CDisclaimers> Disclaimers { get; set; }
     public DbSet<CollectionRun> CollectionRun { get; set; }
     public DbSet<CommonName> CommonName { get; set; }
     public DbSet<Component> Component { get; set; }
