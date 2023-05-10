@@ -28,7 +28,7 @@ public  class LabBIDesignTimeDbContextFactory : IDesignTimeDbContextFactory<LabB
 	public virtual LabBIEFCoreDbContext CreateDbContext(string[] args) {
 		//throw new InvalidOperationException("Make sure that the database connection string and connection provider are correct. After that, uncomment the code below and remove this exception.");
 		var optionsBuilder = new DbContextOptionsBuilder<LabBIEFCoreDbContext>();
-		optionsBuilder.UseSqlServer("Encrypt=false;Integrated Security=SSPI;Data Source=BCH-BTO;Initial Catalog=Labware8Migrate");
+		optionsBuilder.UseSqlServer("Encrypt=false;Integrated Security=SSPI;Data Source=MARTINBREKHE5B0\\SQL2022;Initial Catalog=Labware8Migrate");
         optionsBuilder.UseChangeTrackingProxies();
         optionsBuilder.UseObjectSpaceLinkProxies();
 		return new LabBIEFCoreDbContext(optionsBuilder.Options);

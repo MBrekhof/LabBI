@@ -23,10 +23,10 @@ public partial class CDisclaimers : BaseObjectNoID
 
     [Column("CATEGORY")]
     [StringLength(20)]
-    [VisibleInListView(true), VisibleInLookupListView(true)]
+    [VisibleInListView(false), VisibleInLookupListView(false),VisibleInDetailView(false)]
     public virtual string Categoryname { get; set; }
-    //[VisibleInListView(true), VisibleInLookupListView(true)]
-    //public virtual CDisclaimerCat Category { get; set; }
+    [VisibleInListView(true), VisibleInLookupListView(true)]
+    public virtual CDisclaimerCat Category { get; set; }
 
     [Column("CODE")]
     [StringLength(20)]
