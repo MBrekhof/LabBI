@@ -8,20 +8,22 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace LabBI.Module.BusinessObjects;
 
 
-[PrimaryKey("Batch", "ObjectId", "OrderNumber")]
+[PrimaryKey("BatchName", "ObjectId", "OrderNumber")]
 [Table("BATCH_OBJECTS")]
 //[Index("ObjectId", Name = "idx_BATCH_OBJECTS_OBJECTID")]
 [DefaultClassOptions]
 [NavigationItem("Batch")]
-[DefaultProperty("BATCH")]
+[DefaultProperty("Batch")]
 public partial class BatchObjects
 {
     [Key]
     [Column("BATCH")]
     [StringLength(20)]
     [VisibleInListView(false), VisibleInLookupListView(false)]
-    public virtual string Batch { get; set; }
+    public virtual string BatchName { get; set; }
 
+    [VisibleInListView(true), VisibleInLookupListView(true)]
+    public virtual Batch Batch { get; set; }
     [Key]
     [Column("OBJECT_ID")]
     public virtual int ObjectId { get; set; }

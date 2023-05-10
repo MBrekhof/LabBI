@@ -10,7 +10,7 @@ namespace LabBI.Module.BusinessObjects;
 //[Index("CompanyName", Name = "idxCustomerCompany")]
 [DefaultClassOptions]
 [NavigationItem("CRM")]
-[DefaultProperty("NAME")]
+[DefaultProperty("Name")]
 public partial class Customer : BaseObjectNoID
 {
     [Key]

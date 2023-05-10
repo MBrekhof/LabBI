@@ -9,7 +9,7 @@ namespace LabBI.Module.BusinessObjects;
 [Table("BATCH_PROTOCOL")]
 [DefaultClassOptions]
 [NavigationItem("Batch")]
-[DefaultProperty("NAME")]
+[DefaultProperty("Name")]
 public partial class BatchProtocol
 {
     [Key]
