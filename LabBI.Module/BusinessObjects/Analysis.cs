@@ -107,7 +107,7 @@ namespace LabBI.Module.BusinessObjects
         public virtual string KeyContact { get; set; }
 
         [VisibleInListView(false), VisibleInLookupListView(false)]
-        [Column("CHANGED_ON")]
+        [Column("CHANGED_ON", TypeName = "datetime")]
 
         public virtual DateTime? ChangedOn { get; set; }
 

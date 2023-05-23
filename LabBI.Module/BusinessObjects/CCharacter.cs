@@ -82,13 +82,13 @@ public partial class CCharacter
     [StringLength(20)]
     public virtual string CreatedBy { get; set; }
 
-    [Column("CREATED_ON")]
+    [Column("CREATED_ON", TypeName = "datetime")]
     public virtual DateTime? CreatedOn { get; set; }
 
     [Column("CHANGED_BY")]
     [StringLength(20)]
     public virtual string ChangedBy { get; set; }
 
-    [Column("CHANGED_ON")]
+    [Column("CHANGED_ON", TypeName = "datetime")]
     public virtual DateTime? ChangedOn { get; set; }
 }

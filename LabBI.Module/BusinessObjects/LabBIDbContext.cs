@@ -151,6 +151,10 @@ public class LabBIEFCoreDbContext : DbContext
             .HasKey(ii => ii.SampleNumber)
             .HasName("PK_SAMPLE_SAMPLE_NUMBER");
 
+        modelBuilder.Entity<Invoice>()
+            .HasMany(ii => ii.InvoiceItems)
+            .WithOne(ii => ii.InvoiceNumber)
+            .OnDelete(DeleteBehavior.Cascade);
     }
 }
 

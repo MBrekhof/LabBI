@@ -18,7 +18,7 @@ public partial class CGeoviewer
     [StringLength(100)]
     public virtual string Naam { get; set; }
 
-    [Column("DATE_CREATED")]
+    [Column("DATE_CREATED", TypeName = "datetime")]
     public virtual DateTime? DateCreated { get; set; }
 
     [Column("BRANDKRAANNUMMER")]
@@ -44,7 +44,7 @@ public partial class CGeoviewer
     [StringLength(100)]
     public virtual string ContactpersoonAannemer { get; set; }
 
-    [Column("DATE_CREATED_MONSTERNAME")]
+    [Column("DATE_CREATED_MONSTERNAME", TypeName = "datetime")]
     public virtual DateTime? DateCreatedMonstername { get; set; }
 
     [Column("EIGENAAR")]

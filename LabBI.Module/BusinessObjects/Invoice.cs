@@ -44,7 +44,7 @@ namespace LabBI.Module.BusinessObjects
         [VisibleInListView(false), VisibleInLookupListView(false)]
         public virtual string ChangedBy { get; set; }
 
-        [Column("CHANGED_ON")]
+        [Column("CHANGED_ON", TypeName = "datetime")]
         [VisibleInListView(false), VisibleInLookupListView(false)]
         public virtual DateTime? ChangedOn { get; set; }
 
@@ -58,16 +58,17 @@ namespace LabBI.Module.BusinessObjects
         [VisibleInListView(false), VisibleInLookupListView(false)]
         public virtual string Closed { get; set; }
 
-        [Column("INVOICE_STARTED")]
+        [Column("INVOICE_STARTED", TypeName = "datetime")]
         [VisibleInListView(false), VisibleInLookupListView(false)]
+      
         public virtual DateTime? InvoiceStarted { get; set; }
 
-        [Column("INVOICE_SCHED_DATE")]
+        [Column("INVOICE_SCHED_DATE", TypeName = "datetime")]
         [VisibleInListView(false), VisibleInLookupListView(false)]
         public virtual DateTime? InvoiceSchedDate { get; set; }
 
-        [Column("INVOICED_ON")]
-        [VisibleInListView(false), VisibleInLookupListView(false)]
+        [Column("INVOICED_ON", TypeName = "datetime")]
+       // [VisibleInListView(false), VisibleInLookupListView(false)]
         public virtual DateTime? InvoicedOn { get; set; }
 
         [Column("INVOICED_BY")]
@@ -91,7 +92,7 @@ namespace LabBI.Module.BusinessObjects
         [VisibleInListView(true), VisibleInLookupListView(false)]
         public virtual float? AmountDue { get; set; }
 
-        [Column("PAYMENT_DUE")]
+        [Column("PAYMENT_DUE", TypeName = "datetime")]
         [VisibleInListView(false), VisibleInLookupListView(false)]
         public virtual DateTime? PaymentDue { get; set; }
 
@@ -114,7 +115,7 @@ namespace LabBI.Module.BusinessObjects
         [VisibleInListView(false), VisibleInLookupListView(false)]
         public virtual string PrintedBy { get; set; }
 
-        [Column("PRINTED_ON")]
+        [Column("PRINTED_ON", TypeName = "datetime")]
         [VisibleInListView(false), VisibleInLookupListView(false)]
         public virtual DateTime? PrintedOn { get; set; }
 
@@ -138,7 +139,7 @@ namespace LabBI.Module.BusinessObjects
         [VisibleInListView(false), VisibleInLookupListView(false)]
         public virtual string TCustomerPo { get; set; }
 
-        [Column("T_FIN_SYS_EXPORT_ON")]
+        [Column("T_FIN_SYS_EXPORT_ON", TypeName = "datetime")]
         [VisibleInListView(false), VisibleInLookupListView(false)]
         public virtual DateTime? TFinSysExportOn { get; set; }
 
@@ -164,7 +165,7 @@ namespace LabBI.Module.BusinessObjects
         public virtual string TReviewReq { get; set; }
 
 
-        public virtual IList<InvoiceItem> InvoiceItems { get; set; } = new ObservableCollection<InvoiceItem>();
+        public virtual ICollection<InvoiceItem> InvoiceItems { get; set; } = new ObservableCollection<InvoiceItem>();
     }
 }
 

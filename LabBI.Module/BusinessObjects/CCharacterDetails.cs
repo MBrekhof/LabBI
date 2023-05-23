@@ -44,6 +44,6 @@ public partial class CCharacterDetails
     [StringLength(20)]
     public virtual string CreatedBy { get; set; }
 
-    [Column("CREATED_ON")]
+    [Column("CREATED_ON", TypeName = "datetime")]
     public virtual DateTime? CreatedOn { get; set; }
 }
