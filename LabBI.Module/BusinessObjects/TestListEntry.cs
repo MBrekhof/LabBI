@@ -1,5 +1,6 @@
 ﻿using DevExpress.Persistent.Base;
 using Microsoft.EntityFrameworkCore;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -8,6 +9,9 @@ namespace LabBI.Module.BusinessObjects;
 [PrimaryKey("Name", "Analysis", "AnalysisCount")]
 [Table("TEST_LIST_ENTRY")]
 //[Index("Analysis", Name = "idx_TEST_LIST_ENTRY_ANALYSIS")]
+[DefaultClassOptions]
+[NavigationItem("Samples")]
+[DefaultProperty("Name")]
 public  partial class TestListEntry: BaseObjectNoID
 {
     [Key]

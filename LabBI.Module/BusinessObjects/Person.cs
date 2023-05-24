@@ -1,5 +1,5 @@
 ﻿using DevExpress.Persistent.Base;
-using Microsoft.EntityFrameworkCore;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -8,6 +8,9 @@ namespace LabBI.Module.BusinessObjects;
 [Table("PERSON")]
 //[Index("AddressBook", Name = "PERSON_ADDRESS7446")]
 //[Index("Organization", Name = "idxPersonOrganization")]
+[DefaultClassOptions]
+[NavigationItem("CRM")]
+[DefaultProperty("LastName")]
 public  partial class Person: BaseObjectNoID
 {
     [Key]
@@ -16,17 +19,17 @@ public  partial class Person: BaseObjectNoID
 
     [Column("ADDRESS_BOOK")]
     [StringLength(20)]
-        [VisibleInListView(false), VisibleInLookupListView(false)]
+        [VisibleInListView(true), VisibleInLookupListView(true)]
     public virtual string AddressBook { get; set; }
 
     [Column("REMOVED")]
     [StringLength(1)]
-        [VisibleInListView(false), VisibleInLookupListView(false)]
+        [VisibleInListView(true), VisibleInLookupListView(false)]
     public virtual string Removed { get; set; }
 
     [Column("ALIAS")]
     [StringLength(30)]
-        [VisibleInListView(false), VisibleInLookupListView(false)]
+        [VisibleInListView(true), VisibleInLookupListView(true)]
     public virtual string Alias { get; set; }
 
     [Column("SALUTATION")]
@@ -36,17 +39,17 @@ public  partial class Person: BaseObjectNoID
 
     [Column("FIRST_NAME")]
     [StringLength(20)]
-        [VisibleInListView(false), VisibleInLookupListView(false)]
+        [VisibleInListView(true), VisibleInLookupListView(true)]
     public virtual string FirstName { get; set; }
 
     [Column("MID_INIT")]
     [StringLength(5)]
-        [VisibleInListView(false), VisibleInLookupListView(false)]
+        [VisibleInListView(true), VisibleInLookupListView(false)]
     public virtual string MidInit { get; set; }
 
     [Column("LAST_NAME")]
     [StringLength(30)]
-        [VisibleInListView(false), VisibleInLookupListView(false)]
+        [VisibleInListView(true), VisibleInLookupListView(true)]
     public virtual string LastName { get; set; }
 
     [Column("NAME_SUFX")]
@@ -61,7 +64,7 @@ public  partial class Person: BaseObjectNoID
 
     [Column("ORGANIZATION")]
     [StringLength(40)]
-        [VisibleInListView(false), VisibleInLookupListView(false)]
+        [VisibleInListView(true), VisibleInLookupListView(false)]
     public virtual string Organization { get; set; }
 
     [Column("STREET_ADDR")]
@@ -101,7 +104,7 @@ public  partial class Person: BaseObjectNoID
 
     [Column("PHONE")]
     [StringLength(20)]
-        [VisibleInListView(false), VisibleInLookupListView(false)]
+        [VisibleInListView(true), VisibleInLookupListView(true)]
     public virtual string Phone { get; set; }
 
     [Column("EXTENSION")]
@@ -156,7 +159,7 @@ public  partial class Person: BaseObjectNoID
 
     [Column("EMAIL_ADDR")]
     [StringLength(100)]
-        [VisibleInListView(false), VisibleInLookupListView(false)]
+        [VisibleInListView(true), VisibleInLookupListView(false)]
     public virtual string EmailAddr { get; set; }
 
     [Column("PERSON_NOTE")]

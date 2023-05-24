@@ -21,11 +21,12 @@
     <LayoutManagerOptions RequiredFieldMark="*" />
   </Options>
   <SchemaModules>
-    <SchemaModule Name="SchedulerModuleBase" Version="23.1.1.0" IsNewNode="True" />
-    <SchemaModule Name="SystemModule" Version="23.1.1.0" IsNewNode="True" />
+    <SchemaModule Name="SchedulerModuleBase" Version="23.1.2.0" IsNewNode="True" />
+    <SchemaModule Name="SystemModule" Version="23.1.2.0" IsNewNode="True" />
   </SchemaModules>
   <Views>
     <ListView Id="ApplicationUser_ListView" Caption="Users" />
+    <ListView Id="Batch_ListView" IsGroupPanelVisible="True" ShowAutoFilterRow="True" />
     <DetailView Id="Customer_DetailView">
       <Layout>
         <LayoutGroup Id="Main" RelativeSize="100">
@@ -121,11 +122,11 @@
                 <LayoutItem Id="ContractNumber" RelativeSize="5.02092050209205" />
                 <LayoutItem Id="Customer" RelativeSize="5.02092050209205" />
                 <LayoutItem Id="InvoiceId" RelativeSize="5.02092050209205" />
+                <LayoutItem Id="PoNumber" RelativeSize="5.02092050209205" />
                 <LayoutGroup Id="Auto56e66e59-e848-42d2-b108-802a83b51bb9" ShowCaption="False" Caption="" Direction="Horizontal" Index="5" RelativeSize="5.02092050209205" IsNewNode="True">
                   <LayoutItem Id="ChangedBy" ViewItem="ChangedBy" Index="0" RelativeSize="50" IsNewNode="True" />
                   <LayoutItem Id="ChangedOn" ViewItem="ChangedOn" Index="1" RelativeSize="50" IsNewNode="True" />
                 </LayoutGroup>
-                <LayoutItem Id="PoNumber" RelativeSize="5.02092050209205" />
                 <LayoutGroup Id="Autob05adac2-82ce-442c-acbe-cb7a98630e42" ShowCaption="False" Caption="" Index="6" RelativeSize="25.10460251046025" IsNewNode="True">
                   <LayoutItem Id="GroupName" ViewItem="GroupName" Index="0" RelativeSize="20" IsNewNode="True" />
                   <LayoutItem Id="Closed" ViewItem="Closed" Index="1" RelativeSize="20" IsNewNode="True" />
@@ -186,6 +187,7 @@
         </LayoutGroup>
       </Layout>
     </DetailView>
+    <ListView Id="Invoice_ListView" ShowAutoFilterRow="True" IsGroupPanelVisible="True" />
     <ListView Id="Invoice_LookupListView">
       <Columns>
         <ColumnInfo Id="ContractNumber" Width="113" />
@@ -223,5 +225,7 @@
         </LayoutGroup>
       </Layout>
     </DetailView>
+    <ListView Id="Sample_ListView" ShowAutoFilterRow="True" IsGroupPanelVisible="True" />
+    <ListView Id="Test_ListView" ShowAutoFilterRow="True" IsGroupPanelVisible="True" />
   </Views>
 </Application>

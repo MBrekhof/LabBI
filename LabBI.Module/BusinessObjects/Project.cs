@@ -1,5 +1,5 @@
 ﻿using DevExpress.Persistent.Base;
-using Microsoft.EntityFrameworkCore;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -8,6 +8,9 @@ namespace LabBI.Module.BusinessObjects;
 [Table("PROJECT")]
 //[Index("ChargeCode", Name = "idx_PROJECT_CHARGE_CODE")]
 //[Index("Customer", Name = "idx_Project_Customer")]
+[DefaultClassOptions]
+[NavigationItem("CRM")]
+[DefaultProperty("Name")]
 public  partial class Project : BaseObjectNoID
 {
     [Key]

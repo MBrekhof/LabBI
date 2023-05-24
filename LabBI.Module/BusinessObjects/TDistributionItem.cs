@@ -1,5 +1,6 @@
 ﻿using DevExpress.Persistent.Base;
 using Microsoft.EntityFrameworkCore;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -7,6 +8,9 @@ namespace LabBI.Module.BusinessObjects;
 
 [PrimaryKey("ItemId", "TDistributionList", "Person")]
 [Table("T_DISTRIBUTION_ITEM")]
+[DefaultClassOptions]
+[NavigationItem("T_*")]
+[DefaultProperty("TDistributionList")]
 public  partial class TDistributionItem: BaseObjectNoID
 {
     [Key]

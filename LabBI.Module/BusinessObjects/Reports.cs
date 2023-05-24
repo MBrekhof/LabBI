@@ -1,11 +1,14 @@
 ﻿using DevExpress.Persistent.Base;
-using Microsoft.EntityFrameworkCore;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace LabBI.Module.BusinessObjects;
 
 [Table("REPORTS")]
+[DefaultClassOptions]
+[NavigationItem("Labware Reports")]
+[DefaultProperty("Name")]
 public  partial class Reports: BaseObjectNoID
 {
     [Key]

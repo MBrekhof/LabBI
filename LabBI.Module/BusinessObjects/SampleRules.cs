@@ -1,11 +1,14 @@
 ﻿using DevExpress.Persistent.Base;
-using Microsoft.EntityFrameworkCore;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace LabBI.Module.BusinessObjects;
 
 [Table("SAMPLE_RULES")]
+[DefaultClassOptions]
+[NavigationItem("Samples")]
+[DefaultProperty("Name")]
 public  partial class SampleRules: BaseObjectNoID
 {
     [Key]

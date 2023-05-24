@@ -1,5 +1,5 @@
 ﻿using DevExpress.Persistent.Base;
-using Microsoft.EntityFrameworkCore;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -7,6 +7,9 @@ namespace LabBI.Module.BusinessObjects;
 
 [Table("SAMPLING_POINT")]
 //[Index("CCustomer", Name = "idxSamplingPointCustomer")]
+[DefaultClassOptions]
+[NavigationItem("Samples")]
+[DefaultProperty("Name")]
 public  partial class SamplingPoint : BaseObjectNoID
 {
     [Key]

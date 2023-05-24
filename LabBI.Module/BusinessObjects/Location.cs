@@ -1,22 +1,25 @@
 ﻿using DevExpress.Persistent.Base;
-using Microsoft.EntityFrameworkCore;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace LabBI.Module.BusinessObjects;
 
 [Table("LOCATION")]
+[DefaultClassOptions]
+[NavigationItem("CRM")]
+[DefaultProperty("Name")]
 public  partial class Location: BaseObjectNoID
 {
     [Key]
     [Column("NAME")]
     [StringLength(20)]
-        [VisibleInListView(false), VisibleInLookupListView(false)]
+        [VisibleInListView(true), VisibleInLookupListView(true)]
     public virtual string Name { get; set; }
 
     [Column("DESCRIPTION")]
     [StringLength(254)]
-        [VisibleInListView(false), VisibleInLookupListView(false)]
+        [VisibleInListView(true), VisibleInLookupListView(true)]
     public virtual string Description { get; set; }
 
     [Column("ADDRESS")]
@@ -36,7 +39,7 @@ public  partial class Location: BaseObjectNoID
 
     [Column("PHONE")]
     [StringLength(30)]
-        [VisibleInListView(false), VisibleInLookupListView(false)]
+        [VisibleInListView(true), VisibleInLookupListView(true)]
     public virtual string Phone { get; set; }
 
     [Column("FAX")]
@@ -56,7 +59,7 @@ public  partial class Location: BaseObjectNoID
 
     [Column("COMPANY")]
     [StringLength(50)]
-        [VisibleInListView(false), VisibleInLookupListView(false)]
+        [VisibleInListView(true), VisibleInLookupListView(false)]
     public virtual string Company { get; set; }
 
     [Column("SITE")]

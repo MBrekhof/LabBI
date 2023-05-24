@@ -1,11 +1,15 @@
 ﻿using DevExpress.Persistent.Base;
 using Microsoft.EntityFrameworkCore;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace LabBI.Module.BusinessObjects;
 
 [Table("ZONE")]
+[DefaultClassOptions]
+[NavigationItem("Overig")]
+[DefaultProperty("Name")]
 public  partial class Zone: BaseObjectNoID
 {
     [Key]

@@ -1,17 +1,21 @@
 ﻿using DevExpress.Persistent.Base;
 using Microsoft.EntityFrameworkCore;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace LabBI.Module.BusinessObjects;
 
 [Table("TAX_PLAN")]
+[DefaultClassOptions]
+[NavigationItem("Invoices")]
+[DefaultProperty("Name")]
 public  partial class TaxPlan:BaseObjectNoID
 {
     [Key]
     [Column("NAME")]
     [StringLength(20)]
-        [VisibleInListView(false), VisibleInLookupListView(false)]
+        [VisibleInListView(true), VisibleInLookupListView(true)]
     public virtual string Name { get; set; }
 
     [Column("CHANGED_BY")]
@@ -24,12 +28,12 @@ public  partial class TaxPlan:BaseObjectNoID
 
     [Column("REMOVED")]
     [StringLength(1)]
-        [VisibleInListView(false), VisibleInLookupListView(false)]
+        [VisibleInListView(true), VisibleInLookupListView(true)]
     public virtual string Removed { get; set; }
 
     [Column("DESCRIPTION")]
     [StringLength(254)]
-        [VisibleInListView(false), VisibleInLookupListView(false)]
+        [VisibleInListView(true), VisibleInLookupListView(false)]
     public virtual string Description { get; set; }
 
     [Column("GROUP_NAME")]

@@ -1,5 +1,6 @@
 ﻿using DevExpress.Persistent.Base;
 using Microsoft.EntityFrameworkCore;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -12,6 +13,9 @@ namespace LabBI.Module.BusinessObjects;
 //[Index("Season", Name = "idx_T_PROGRAM_ITEM_SEASON")]
 //[Index("TestList", Name = "idx_T_PROGRAM_ITEM_TEST_LIST")]
 //[Index("TProgram", Name = "idx_T_PROGRAM_ITEM_T_PROGRAM")]
+[DefaultClassOptions]
+[NavigationItem("Planning")]
+[DefaultProperty("T_PROGRAM")]
 public  partial class TProgramItem: BaseObjectNoID
 {
     [Key]

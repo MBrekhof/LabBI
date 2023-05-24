@@ -1,10 +1,14 @@
 ﻿using DevExpress.Persistent.Base;
 using Microsoft.EntityFrameworkCore;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 namespace LabBI.Module.BusinessObjects;
 
 [Table("T_PROGRAM")]
+[DefaultClassOptions]
+[NavigationItem("Planning")]
+[DefaultProperty("Name")]
 public  partial class TProgram: BaseObjectNoID
 {
     [Key]

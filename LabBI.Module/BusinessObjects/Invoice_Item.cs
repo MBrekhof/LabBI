@@ -1,8 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using DevExpress.Persistent.Base;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using DevExpress.Persistent.Base;
-using LabBI.Module.BusinessObjects;
-using Microsoft.EntityFrameworkCore;
 
 namespace LabBI.Module.BusinessObjects
 {

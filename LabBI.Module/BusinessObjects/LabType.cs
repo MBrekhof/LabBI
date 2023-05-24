@@ -1,6 +1,4 @@
-﻿using DevExpress.ExpressApp.DC;
-using DevExpress.Persistent.Base;
-using System.Collections.ObjectModel;
+﻿using DevExpress.Persistent.Base;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -8,6 +6,9 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace LabBI.Module.BusinessObjects;
 
 [Table("LAB_TYPE")]
+[DefaultClassOptions]
+[NavigationItem("Overig")]
+[DefaultProperty("Name")]
 public  partial class LabType
 {
     [Key]

@@ -1,11 +1,16 @@
 ﻿using DevExpress.Persistent.Base;
 using Microsoft.EntityFrameworkCore;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace LabBI.Module.BusinessObjects;
 
 [Table("WATER_SOURCE")]
+[DefaultClassOptions]
+[NavigationItem("Overig")]
+[DefaultProperty("Name")]
+
 public  partial class WaterSource: BaseObjectNoID
 {
     [Key]

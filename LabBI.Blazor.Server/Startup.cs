@@ -144,7 +144,6 @@ public  class Startup {
             .AddXafWebApi(Configuration, options => {
                 // Use options.BusinessObject<YourBusinessObject>() to make the Business Object available in the Web API and generate the GET, POST, PUT, and DELETE HTTP methods for it.
                 options.BusinessObject<Account>();
-                options.BusinessObject<Customer>();
                 options.BusinessObject<Analysis>();
                 options.BusinessObject<AnalysisApproval>();
                 options.BusinessObject<AnalysisTypes>();
@@ -205,7 +204,8 @@ public  class Startup {
                 Title = "LabBI API",
                 Version = "v1",
                 Description = @"Use AddXafWebApi(options) in the LabBI.Blazor.Server\Startup.cs file to make Business Objects available in the Web API."
-            });
+                
+        });
             c.AddSecurityDefinition("JWT", new OpenApiSecurityScheme() {
                 Type = SecuritySchemeType.Http,
                 Name = "Bearer",
@@ -225,6 +225,7 @@ public  class Startup {
                         new string[0]
                     },
             });
+            c.ResolveConflictingActions(apiDescriptions => apiDescriptions.First());
         });
     }
 

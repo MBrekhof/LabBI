@@ -1,12 +1,16 @@
 ﻿
 using DevExpress.Persistent.Base;
 using Microsoft.EntityFrameworkCore;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace LabBI.Module.BusinessObjects;
 
 [Table("T_CERTIFICATION")]
+[DefaultClassOptions]
+[NavigationItem("T_*")]
+[DefaultProperty("Name")]
 public  partial class TCertification: BaseObjectNoID
 {
     [Key]
