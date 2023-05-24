@@ -22,8 +22,8 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
-    <PackageReference Include="DevExpress.ExpressApp.EasyTest.BlazorAdapter" Version="23.1.2-pre-23080" />
-    <PackageReference Include="DevExpress.ExpressApp.EasyTest.WinAdapter" Version="23.1.2-pre-23080" />
+    <PackageReference Include="DevExpress.ExpressApp.EasyTest.BlazorAdapter" Version="23.1.2-beta" />
+    <PackageReference Include="DevExpress.ExpressApp.EasyTest.WinAdapter" Version="23.1.2-beta" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LabBI.Module\LabBI.Module.csproj" />

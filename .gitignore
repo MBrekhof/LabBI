@@ -401,3 +401,4 @@ LabBI.Module/UnusableNodes.xml
 Deploy/wwwroot
 Deploy
 LabBI.Module/UnusableNodes*.xml
+*.bak
