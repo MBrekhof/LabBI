@@ -20,6 +20,8 @@ using DevExpress.ExpressApp.Security.Authentication;
 using DevExpress.ExpressApp.Security.Authentication.ClientServer;
 using DevExpress.ExpressApp.Core;
 using LabBI.Module.BusinessObjects;
+using DevExpress.DashboardAspNetCore;
+using DevExpress.DashboardWeb;
 
 namespace LabBI.Blazor.Server;
 
@@ -47,6 +49,13 @@ public  class Startup {
                 .AddConditionalAppearance()
                 .AddDashboards(options => {
                     options.DashboardDataType = typeof(DevExpress.Persistent.BaseImpl.EF.DashboardData);
+                    options.SetupDashboardConfigurator = (configurator, services) =>
+                    {
+                        var configuration = services.GetRequiredService<IConfiguration>();
+                        configurator.SetConnectionStringsProvider(new DashboardConnectionStringsProvider(configuration));
+                        configurator.AllowExecutingCustomSql = true;
+                    };
+                 
                 })
                 .AddFileAttachments()
                 .AddOffice()
@@ -61,6 +70,7 @@ public  class Startup {
                 .AddViewVariants()
                 .Add<LabBI.Module.LabBIModule>()
             	.Add<LabBIBlazorModule>();
+            DashboardConfigurator.PassCredentials = true;
             builder.ObjectSpaceProviders
                 .AddSecuredEFCore().WithAuditedDbContext(contexts => {
                     contexts.Configure<LabBI.Module.BusinessObjects.LabBIEFCoreDbContext, LabBI.Module.BusinessObjects.LabBIAuditingDbContext>(

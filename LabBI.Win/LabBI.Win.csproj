@@ -54,4 +54,9 @@
   <ItemGroup>
     <ProjectReference Include="..\LabBI.Module\LabBI.Module.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.ExpressApp.Dashboards.Blazor.v23.1">
+      <HintPath>..\..\..\Program Files\DevExpress 23.1\Components\Offline Packages\devexpress.expressapp.dashboards.blazor\23.1.2-beta\lib\net6.0\DevExpress.ExpressApp.Dashboards.Blazor.v23.1.dll</HintPath>
+    </Reference>
+  </ItemGroup>
 </Project>
