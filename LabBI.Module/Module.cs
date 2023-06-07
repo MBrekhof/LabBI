@@ -12,6 +12,7 @@ using DevExpress.ExpressApp.Model.NodeGenerators;
 using DevExpress.Persistent.BaseImpl.EF.Kpi;
 using DevExpress.ExpressApp.ReportsV2;
 using DevExpress.Persistent.BaseImpl.EF;
+using DevExpress.ExpressApp.Dashboards;
 
 namespace LabBI.Module;
 
@@ -55,6 +56,8 @@ public  sealed class LabBIModule : ModuleBase {
 		AdditionalExportedTypes.Add(typeof(KpiHistoryItem));
 		AdditionalExportedTypes.Add(typeof(KpiInstance));
 		AdditionalExportedTypes.Add(typeof(KpiScorecard));
+
+        DashboardsModule.DataProvider.TopReturnedRecordsInDesigner = 1000;
     }
     public  override IEnumerable<ModuleUpdater> GetModuleUpdaters(IObjectSpace objectSpace, Version versionFromDB) {
         ModuleUpdater updater = new DatabaseUpdate.Updater(objectSpace, versionFromDB);
