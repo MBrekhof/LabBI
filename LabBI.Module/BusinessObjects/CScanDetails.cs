@@ -5,7 +5,9 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace LabBI.Module.BusinessObjects;
-
+[DefaultClassOptions]
+[NavigationItem("Platen")]
+//[DefaultProperty("AccountNumber")]
 [Table("C_SCAN_DETAILS")]
 //[Index("SampleNumber", "PlateDetails", Name = "idxSCAN_DETAILS_SAMPLENO")]
 public partial class CScanDetails
@@ -18,7 +20,9 @@ public partial class CScanDetails
     public virtual int SampleNumber { get; set; }
 
     [Column("PLATE_DETAILS")]
-    public virtual int? PlateDetails { get; set; }
+    [VisibleInListView(false), VisibleInLookupListView(false), VisibleInDetailView(false)]
+    public virtual int? PlateDetailsID { get; set; }
+    public virtual CPlateDetails PlateDetails { get; set; }
 
     [Required]
     [Column("BARCODE")]

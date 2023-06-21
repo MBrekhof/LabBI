@@ -3,15 +3,23 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Globalization;
 
 namespace LabBI.Module.BusinessObjects;
-
+[DefaultClassOptions]
+[NavigationItem("Platen")]
+[DefaultProperty("Header")]
 [Table("C_PLATE_DETAILS")]
 public partial class CPlateDetails
 {
     [Key]
     [Column("SEQ_NUM")]
     public virtual int SeqNum { get; set; }
+    public virtual string Header
+    {
+        get { return Analysis + " " + PlateCode + " " + (Volume.HasValue ? Volume.Value.ToString("F2"):"") ; }
+    }
+
 
     [Required]
     [Column("ANALYSIS")]
@@ -32,7 +40,7 @@ public partial class CPlateDetails
     public virtual int? OrderNumber { get; set; }
 
     [Column("VOLUME", TypeName = "decimal(16, 8)")]
-    public decimal? Volume { get; set; }
+    public virtual decimal? Volume { get; set; }
 
     [Column("PLATE_CODE")]
     [StringLength(10)]

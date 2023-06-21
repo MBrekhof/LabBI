@@ -74,6 +74,7 @@ public class LabBIEFCoreDbContext : DbContext
     public DbSet<CCharacter> Character { get; set; }
     public DbSet<CCharacterDetails> CharacterDetails { get; set; }
     public DbSet<CCntrlCrtData> cCntrlCrtData { get; set; }
+    public DbSet<CPlateDetails> CPlateDetails { get; set; }
     public DbSet<CDisclaimerCat> DisclaimerCat { get; set; }
     public DbSet<CDisclaimerReg> DisclaimerReg { get; set; }
     public DbSet<CDisclaimers> Disclaimers { get; set; }
@@ -83,6 +84,7 @@ public class LabBIEFCoreDbContext : DbContext
     public DbSet<ContainerType> ContainerType { get; set; }
     public DbSet<ContractQuote> ContractQuote { get; set; }
     public DbSet<CostItem> CostItem { get; set; }
+    public DbSet<CScanDetails> ScanDetails { get; set; }
     public DbSet<Customer> Customer { get; set; }
     public DbSet<Instruments> Instruments { get; set; }
     public DbSet<Invoice> Invoice { get; set; }
