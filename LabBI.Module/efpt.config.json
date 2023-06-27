@@ -15,128 +15,20 @@
    "SelectedToBeGenerated": 2,
    "Tables": [
       {
-         "Name": "[dbo].[BATCH_HDR_TEMPLATE]",
+         "Name": "[dbo].[Article]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[BATCH_HDR_TMP_FLDS]",
+         "Name": "[dbo].[ArticleDetail]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[BATCH_LINK]",
+         "Name": "[dbo].[ArticleVectorData]",
          "ObjectType": 0
       },
       {
-         "Name": "[dbo].[BATCH_OBJECTS]",
-         "ObjectType": 0
-      },
-      {
-         "Name": "[dbo].[BATCH_PROTOCOL]",
-         "ObjectType": 0
-      },
-      {
-         "Name": "[dbo].[BATCH_STANDARD]",
-         "ObjectType": 0
-      },
-      {
-         "Name": "[dbo].[C_ACCREDITATION]",
-         "ObjectType": 0
-      },
-      {
-         "Name": "[dbo].[C_CHARACTER]",
-         "ObjectType": 0
-      },
-      {
-         "Name": "[dbo].[C_CHARACTER_DETAILS]",
-         "ObjectType": 0
-      },
-      {
-         "Name": "[dbo].[C_CNTRL_CRT_DATA]",
-         "ObjectType": 0
-      },
-      {
-         "Name": "[dbo].[C_DISCLAIMER_CAT]",
-         "ObjectType": 0
-      },
-      {
-         "Name": "[dbo].[C_DISCLAIMER_REG]",
-         "ObjectType": 0
-      },
-      {
-         "Name": "[dbo].[C_DISCLAIMERS]",
-         "ObjectType": 0
-      },
-      {
-         "Name": "[dbo].[C_GEOVIEWER]",
-         "ObjectType": 0
-      },
-      {
-         "Name": "[dbo].[C_MATRIX]",
-         "ObjectType": 0
-      },
-      {
-         "Name": "[dbo].[C_MATRIX_DETAILS]",
-         "ObjectType": 0
-      },
-      {
-         "Name": "[dbo].[C_OOS_DISTR_ITEM]",
-         "ObjectType": 0
-      },
-      {
-         "Name": "[dbo].[C_OOS_DISTR_LIST]",
-         "ObjectType": 0
-      },
-      {
-         "Name": "[dbo].[C_PACKAGE]",
-         "ObjectType": 0
-      },
-      {
-         "Name": "[dbo].[C_PACKAGE_DETAILS]",
-         "ObjectType": 0
-      },
-      {
-         "Name": "[dbo].[C_PLATE_DETAILS]",
-         "ObjectType": 0
-      },
-      {
-         "Name": "[dbo].[C_RESULT_SPEC]",
-         "ObjectType": 0
-      },
-      {
-         "Name": "[dbo].[C_ROUNDING]",
-         "ObjectType": 0
-      },
-      {
-         "Name": "[dbo].[C_SAMPLE_PRIORITY]",
-         "ObjectType": 0
-      },
-      {
-         "Name": "[dbo].[C_SAMPLED_BY]",
-         "ObjectType": 0
-      },
-      {
-         "Name": "[dbo].[C_SCAN_DETAILS]",
-         "ObjectType": 0
-      },
-      {
-         "Name": "[dbo].[C_SPEC_CODE]",
-         "ObjectType": 0
-      },
-      {
-         "Name": "[dbo].[C_SPECIFICATIONS]",
-         "ObjectType": 0
-      },
-      {
-         "Name": "[dbo].[C_TRANSITION]",
-         "ObjectType": 0
-      },
-      {
-         "Name": "[dbo].[C_TWN]",
-         "ObjectType": 0
-      },
-      {
-         "Name": "[dbo].[FACILITY]",
-         "ObjectType": 0
+         "Name": "[dbo].[SimilarContentArticles]",
+         "ObjectType": 2
       }
    ],
    "UiHint": "bch-bto.Labware8Migrate.dbo",

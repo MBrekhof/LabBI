@@ -44,8 +44,13 @@ public class LabBIEFCoreDbContext : DbContext
     public DbSet<ModelDifference> ModelDifferences { get; set; }
     public DbSet<ModelDifferenceAspect> ModelDifferenceAspects { get; set; }
     public DbSet<PermissionPolicyRole> Roles { get; set; }
-    public DbSet<LabBI.Module.BusinessObjects.ApplicationUser> Users { get; set; }
-    public DbSet<LabBI.Module.BusinessObjects.ApplicationUserLoginInfo> UserLoginInfos { get; set; }
+    public DbSet<ApplicationUser> Users { get; set; }
+    public DbSet<ApplicationUserLoginInfo> UserLoginInfos { get; set; }
+    // OpenAI
+    public DbSet<Article> Article { get; set; }
+    public DbSet<ArticleDetail> ArticleDetail { get; set; }
+    public DbSet<ArticleVectorData> ArticleVectorData { get; set; }
+    //
     public DbSet<FileData> FileData { get; set; }
     public DbSet<ReportDataV2> ReportDataV2 { get; set; }
     public DbSet<KpiDefinition> KpiDefinition { get; set; }
