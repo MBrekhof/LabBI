@@ -1,5 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Application Logo="ExpressAppLogo">
+  <BOModel>
+    <Class Name="LabBI.Module.BusinessObjects.Article">
+      <OwnMembers>
+        <Member Name="Description" PropertyEditorType="DevExpress.ExpressApp.Validation.Win.MemoEditStringPropertyEditor" />
+      </OwnMembers>
+    </Class>
+  </BOModel>
   <NavigationItems NavigationStyle="Accordion" DefaultChildItemsDisplayStyle="List" />
   <Options UIType="TabbedMDI" FormStyle="Ribbon" />
   <SchemaModules>

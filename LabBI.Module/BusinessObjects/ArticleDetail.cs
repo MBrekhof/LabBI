@@ -1,4 +1,5 @@
 ﻿
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -26,5 +27,5 @@ public partial class ArticleDetail:BaseObjectNoID
     public virtual Article Article { get; set; }
 
     [InverseProperty("ArticleDetail")]
-    public virtual ICollection<ArticleVectorData> ArticleVectorData { get; set; } = new List<ArticleVectorData>();
+    public virtual ICollection<ArticleVectorData> ArticleVectorData { get; set; } = new ObservableCollection<ArticleVectorData>();
 }
